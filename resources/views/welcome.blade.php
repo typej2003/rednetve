@@ -127,6 +127,38 @@
                 min-width: 180px;
             }
         }
+
+        /* --- 2. Tabletas (Se aplica si el ancho es menor a 1024px) --- */
+        @media (max-width: 1024px) {
+            body {
+                background-color: lightgreen; /* Color de fondo en tabletas */
+                font-size: 18px;
+            }
+
+            .section-search {
+                display: none;
+            }
+
+            .menu-desktop {
+                display: none;
+            }
+        }
+
+            /* --- 3. Móviles (Se aplica si el ancho es menor a 600px) --- */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue; /* Color de fondo en móviles */
+                font-size: 16px;
+            }
+
+            .section-search {
+                display: none;
+            }
+
+            .menu-desktop {
+                display: none;
+            }
+        }
     </style>
     <!-- footer -->
     <style>
