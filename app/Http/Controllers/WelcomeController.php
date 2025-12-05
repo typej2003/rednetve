@@ -193,6 +193,7 @@ class WelcomeController extends Controller
             
         }
         // Fin evaluar currency
+        return view('mantenimiento');
 
         return view('welcome', [
             'words' => $words,
