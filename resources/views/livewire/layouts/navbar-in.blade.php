@@ -1,5 +1,6 @@
 <!-- <nav class="main-header navbar navbar-expand navbar-white navbar-light fixed-top "> -->
-<nav class="main-header navbar navbar-expand navbar-white navbar-orange">
+
+<nav class="main-header navbar navbar-expand navbar-white navbar-rednetve">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -27,7 +28,7 @@
                 </form>
             </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none">
             <div class="row">
                 <div class="col-md-12 mx-2">
                     <div class="dropdown-cart-drop">
@@ -41,12 +42,6 @@
                 </div>
             </div>
         </li>
-        <li class="nav-item">
-            <div class="row">
-                <div class="col-md-12 my-2">
-                    @livewire('components.currency')
-                </div>
-            </div>
-        </li>
+        
     </ul>
 </nav>

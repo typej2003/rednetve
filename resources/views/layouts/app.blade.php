@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>WifiExprés</title>
+    <title>RedNetVe</title>
     <meta name="description" content="Compra y vende Pan de Jamón y Combos Navideños Caracas">
     <meta name="keywords" content="vende, compra, Pan, Jamón, Pan de Jamón, Combos Navideños, Caracas, directo a tu mesa, @panexpres.vezla, Panexprés, Panexpres">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@
          <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        @include('layouts.partials.aside_mk')
+        @include('layouts.partials.aside_rednetve')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">

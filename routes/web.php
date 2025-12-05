@@ -108,10 +108,6 @@ Route::get('/register1', function(){
     return view('auth.register1');
 });
 
-Route::get('/registerAfiliado', function(){
-    return view('auth.registerAfiliado');
-});
-
 Route::get('/registerDelivery', function(){
     return view('auth.registerDelivery');
 });
@@ -152,3 +148,20 @@ Route::get('/google-callback', function () {
 });
 
 Route::get('/errorFound/{error}', ShowError::class)->name('errorFound');
+
+// Rutas de Rednetve
+Route::get('/formulario', function(){
+    return view('formulario');
+})->middleware('auth')->name('formulario');
+Route::get('/residencial', function(){
+    return view('residencial');
+})->name('residencial');
+Route::get('/pyme', function(){
+    return view('pyme');
+})->name('pyme');
+Route::get('/isp', function(){
+    return view('isp');
+})->name('isp');
+Route::get('/corporacionplus', function(){
+    return view('corporacionplus');
+})->name('corporacionplus');

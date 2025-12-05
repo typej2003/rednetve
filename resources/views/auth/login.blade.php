@@ -13,8 +13,15 @@
   <!-- icheck bootstrap -->
   <!-- Theme style -->
   
-  <link rel="stylesheet" href="/css/style-welcome.css">
-  
+  <link rel="stylesheet" href="/css/styles_welcome.css">
+    <style>
+        .logo-login-register {
+            width: 180px;
+        }
+        body {
+            background-color: var(--fondo-pagina);
+        }
+    </style>
 </head>
 <body>
   <div class="container-fluid d-flex ">
@@ -22,18 +29,18 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-12 titulo c-a text-center">
-                    <a href="/"><img class="logo-login-register mx-auto " src="/img/wifiexpres_banner-compressed.jpg" alt=""></a>
+                    <a href="/"><img class="logo-login-register mx-auto " src="/img/logo_rednet.png" alt=""></a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 titulo c-a text-center">
-                    <p class="text-center textoreg">¿Todavía no te has registrado? <span><a href="/register" class="c-n">Crea tu cuenta Aquí</a></span></p>
+                <div class="col-lg-12 titulo c-a text-center mt-3">
+                    <p class="text-center text">¿Todavía no te has registrado? <span><a href="/register" class="c-n">Crea tu cuenta Aquí</a></span></p>
                 </div>
             </div>
     
             <form action="{{ route('autenticar') }}" method="POST">
                 @csrf
-                <div class="form-group my-2">
+                <div class="form-group my-2>
                     <div class="row mx-auto" >
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <label for="user">Usuario</label>
@@ -76,7 +83,7 @@
                 <div class="form-group">
                     <div class="row mx-auto my-3">
                         <div class="col-xs-12 col-sm-12 col-md-12 d-flex">
-                            <button class="btn btn-app w-100 mx-auto">Iniciar Sesión</button>
+                            <button class="btn btn-secondary w-100 mx-auto">Iniciar Sesión</button>
                         </div>
                     </div>                
                 </div>
