@@ -129,7 +129,7 @@
         }
 
         /* --- 2. Tabletas (Se aplica si el ancho es menor a 1024px) --- */
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
             body {
                 background-color: lightgreen; /* Color de fondo en tabletas */
                 font-size: 18px;

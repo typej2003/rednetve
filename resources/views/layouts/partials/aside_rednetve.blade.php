@@ -54,75 +54,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/listRouters" class="nav-link {{ request()->is('listRouters') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-solid fa-network-wired"></i>
-                <p>
-                    Routers
-                </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/viewintegration" class="nav-link {{ request()->is('viewintegration') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-comments"></i>
-                <p>
-                    View Integración Mikrotik
-                </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/usersMikrotik" class="nav-link {{ request()->is('usersMikrotik') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-comments"></i>
-                <p>
-                    Users Mikrotik
-                </p>
-                </a>
-            </li>
-
-            <!-- Hotspot -->
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
-                <p>
-                  Hotspot
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/ListHotspot" class="nav-link {{ request()->is('listHotspot') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Hotspot</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/crearTicket" class="nav-link {{ request()->is('crearTicket') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Crear Ticket</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/crearTicketPhone" class="nav-link {{ request()->is('crearTicketPhone') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Crear Ticket Phone</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/createUser" class="nav-link {{ request()->is('createUser') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Crear Usuario</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/listPlanesHotspot" class="nav-link {{ request()->is('listPlanesHotspot') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Planes (Perfil usuario)</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!-- fin arbol -->
-            
-            <li class="nav-item">
               <a x-ref="profileLink" href="{{ route('admin.profile.edit') }}" class="nav-link {{ request()->is('admin/profile') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
@@ -141,15 +72,6 @@
               </a>
               <ul class="nav nav-treeview nav-link-sub">
                 <li class="nav-item">
-                  <a href="{{ route('star') }}" class="nav-link {{ request()->is('star') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                    <p>
-                      Star
-                    </p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
                   <a href="/listTasas/1" class="nav-link {{ request()->is('listTasas') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-comments"></i>
                     <p>
@@ -159,46 +81,10 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="{{ route('emailexample') }}" class="nav-link {{ request()->is('emailexample') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-comments"></i>
-                    <p>
-                      Prueba de Email
-                    </p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="{{ route('emailFiles') }}" class="nav-link {{ request()->is('emailFiles') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-comments"></i>
-                    <p>
-                      Email con Files
-                    </p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
                   <a href="{{ route('file-import') }}" class="nav-link {{ request()->is('file-import') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-comments"></i>
                     <p>
                         Importar Usuarios
-                    </p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="/api/apicontroller" class="nav-link {{ request()->is('api.apicontroller') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                      Probar Api
-                    </p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="/pasarela" class="nav-link {{ request()->is('pasarela') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                      Pasarela
                     </p>
                   </a>
                 </li>
@@ -215,41 +101,7 @@
             </li>
             <!-- fin arbol -->
 
-            <li class="nav-item">
-              <a href="{{ route('listNotificaciones', 1) }}" class="nav-link {{ request()->is('listNotificaciones') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-comments"></i>
-                <p>
-                  Notificaciones
-                </p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="{{ route('smsSender') }}" class="nav-link {{ request()->is('smsSender') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-comments"></i>
-                <p>
-                  Sms
-                </p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="{{ route('MakePayment', 1) }}" class="nav-link {{ request()->is('MakePayment') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-comments"></i>
-                <p>
-                  Hacer Operacion
-                </p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="{{ route('admin.settings') }}" class="nav-link {{ request()->is('admin/settings') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-cog"></i>
-                <p>
-                  Configuraciones
-                </p>
-              </a>
-            </li>
+            
           @endif
 
           
