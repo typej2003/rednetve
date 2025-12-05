@@ -512,12 +512,12 @@
             <div class="container">
                 <!-- Desktop menu: visible en md+ (con dropdown para SERVICIOS) -->
                 <nav class="menu-desktop d-md-flex justify-content-center align-items-center gap-4 py-2">
-                    <a href="#inicio" data-page="inicio" class="text-white text-uppercase fs-6 mx-3">INICIO</a>
-                    <a href="#nosotros" data-page="nosotros" class="text-white text-uppercase fs-6 mx-3">NOSOTROS</a>
+                    <a href="/#inicio" data-page="inicio" class="text-white text-uppercase fs-6 mx-3">INICIO</a>
+                    <a href="/#nosotros" data-page="nosotros" class="text-white text-uppercase fs-6 mx-3">NOSOTROS</a>
 
                     <!-- SERVICIOS dropdown multinivel -->
                     <div class="dropdown mx-3">
-                        <a href="#servicios" data-page="servicios" class="text-white text-uppercase fs-6 dropdown-toggle">SERVICIOS</a>
+                        <a href="/#servicios" data-page="servicios" class="text-white text-uppercase fs-6 dropdown-toggle">SERVICIOS</a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Residencial</a>
                             <div class="dropdown-submenu">
@@ -556,10 +556,10 @@
                 <!-- Mobile menu (colapsable) -->
                 <div class="collapse d-md-none" id="mobileMenu">
                     <nav class="d-flex flex-column text-center py-2">
-                        <a href="#" class="text-white py-2 border-top">INICIO</a>
-                        <a href="#" class="text-white py-2 border-top">NOSOTROS</a>
-                        <a href="#" class="text-white py-2 border-top">SERVICIOS</a>
-                        <a href="#" class="text-white py-2 border-top">PAGUE AQUÍ</a>
+                        <a href="/" class="text-white py-2 border-top">INICIO</a>
+                        <a href="/#nosotros" class="text-white py-2 border-top">NOSOTROS</a>
+                        <a href="/#servicios" class="text-white py-2 border-top">SERVICIOS</a>
+                        <a href="/formulario" class="text-white py-2 border-top">PAGUE AQUÍ</a>
                     </nav>
                 </div>
 
