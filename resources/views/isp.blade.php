@@ -300,6 +300,24 @@
                     <div class="d-flex align-items-center ms-3">
                         <!-- Mi Rednet (dropdown) -->
                         <div class="dropdown me-2">
+                            @auth
+                            <a class="nav-link dropdown-toggle d-flex align-items-center p-0 text-dark" href="#" id="miRednetDropdownLeft" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-page="mi-rednet">
+                                <img src="img/icono_mirednet.svg" alt="Mi Rednet" class="nav-icon me-2" onerror="this.onerror=null;this.src='https://placehold.co/20x20/007bff/fff?text=R';" style="max-width:20px;">
+                                <span>{{auth()->user()->name}}</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="miRednetDropdownLeft">
+                                @if(auth()->user()->role == 'admin')
+                                    <a class="dropdown-item" href="/admin/dashboard">Escritorio</a>
+                                    <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="profileLink">Perfil</a>
+                                    <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="changePasswordLink">Cambiar Contraseña</a>
+                                    <a class="dropdown-item" href="{{ route('admin.settings') }}">Configuración</a>
+                                @endif
+                                <div class="dropdown-divider"></div>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Salir</a>
+                                </form>
+                            </div>
+                            @else                            
                             <a class="nav-link dropdown-toggle d-flex align-items-center p-0 text-dark" href="#" id="miRednetDropdownLeft" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-page="mi-rednet">
                                 <img src="img/icono_mirednet.svg" alt="Mi Rednet" class="nav-icon me-2" onerror="this.onerror=null;this.src='https://placehold.co/20x20/007bff/fff?text=R';" style="max-width:20px;">
                                 <span>Mi Rednet</span>
@@ -308,6 +326,7 @@
                                 <a class="dropdown-item" href="/login">Login</a>
                                 <a class="dropdown-item" href="#">Salir</a>
                             </div>
+                            @endauth
                         </div>
                     </div>
                     
