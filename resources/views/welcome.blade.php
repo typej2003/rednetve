@@ -340,8 +340,14 @@
                             Dirección
                         </p>
                         <p class="footer-text">
-                            Av. Principal, Edificio Tech<br>
-                            Piso 5, Oficina 501, Caracas, VE
+                            Caracas: Av. Eugenio Mendoza<br>
+                            Torre Banco Lara - mzz Oficina DP1
+                        </p>
+                        <br>
+                        <p class="footer-text">
+                            San Antonio del Tachira: Carrera 6<br>
+                            Entre calle 4 y 5 - Edif Kamaday <br>
+                            Local 1 - Municipio Bolívar
                         </p>
                     </div>
 
@@ -355,9 +361,9 @@
                             Horario de atención
                         </p>
                         <!-- Lunes - Viernes -->
-                        <p class="footer-text mb-0">LUNES - VIERNES: 8:00 a.m. - 5:00 p.m.</p>
+                        <p class="footer-text mb-0">LUNES - VIERNES <br> 8:30 a.m. - 4:30 p.m.</p>
                         <!-- Sábados -->
-                        <p class="footer-text">SÁBADOS: 8:00 a.m. - 2:00 p.m.</p>
+                        
                     </div>
 
                     <!-- Columna 4: Menú y Correo -->
@@ -383,7 +389,7 @@
                             </svg>
                             Correo
                         </p>
-                        <p class="footer-text">contacto@rednetve.com</p>
+                        <p class="footer-text">rednetcaracas@gmail.com <br>rednettachira@gmail.com</p>
                     </div>
 
                 </div>
@@ -393,35 +399,74 @@
         <!-- FILA 2: COPYRIGHT Y REDES SOCIALES (Dos Columnas) -->
         <div class="footer-bottom">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12 align-items-center">
-                        <span class="copyright-text text-white">
-                                El servicio de Internet es provisto por la empresa XXX XXXX Venezuela, C.A. habilitada por CONATEL con el número AAA-00000
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="row align-items-center">
-                    
+                <div class="row align-items-center">                    
                     <!-- Columna 1: Derechos Reservados -->
-                    <div class="col-12 col-md-6 text-center text-md-start">
-                        <span class="copyright-text">
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        <span class="text-white">
                             Todos los derechos reservados | Rednetve 2025
                         </span>
                     </div>
 
                     <!-- Columna 2: Redes Sociales -->
-                    <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <div class="col-12 col-md-4 text-center text-md-end mt-2 mt-md-0 d-flex justify-content-center gap-2">
                         <!-- Facebook -->
                         <a href="#" class="social-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.008 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.943 0-1.29.585-1.29 1.25V8.05h2.22l-.356 2.072H10.5V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
                         </a>
-                        <!-- Twitter -->
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.673 3.633a7.485 7.485 0 0 1-2.181.766 3.737 3.737 0 0 0-1.018-1.787 7.464 7.464 0 0 0-4.634.053 3.702 3.702 0 0 0 2.21 2.95 3.735 3.735 0 0 1-1.705-.471v.048a3.743 3.743 0 0 0 2.996 3.666A3.712 3.712 0 0 1 5.378 9.38L5.3 9.405a3.737 3.737 0 0 0 3.486 2.604 7.491 7.491 0 0 1-5.358 1.83 7.49 7.49 0 0 1-1.44-.085 10.575 10.575 0 0 0 5.093 1.488c6.115 0 9.444-5.07 9.444-9.445v-.392a6.76 6.76 0 0 0 1.57-1.638z"/></svg>
-                        </a>
-                        <!-- Instagram -->
-                        
+                       
+
+                        <!-- Icono SVG de Instagram -->
+ <a href="#" class="social-icon">
+                        <svg xmlns="www.w3.org" width="40" height="40" viewBox="0 0 40 40">
+                            <circle cx="20" cy="20" r="20" fill="#009a9e"/>
+                            <!-- SVG del icono centrado como elemento de imagen o similar -->
+                            <svg x="8" y="8" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#FFFFFF" d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89H8.025v-2.833h2.413V9.77c0-2.387 1.436-3.708 3.593-3.708.879 0 1.554.064 1.768.093v2.44h-1.48c-1.155 0-1.378.547-1.378 1.353v1.765h2.828l-.454 2.833H13.04v6.988C17.381 21.05 21 16.921 21 12.02S16.52 2 12 2zm0 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                        </svg>
+</a>
+
+
+
+                        <!-- Icono SVG de TikTok -->
+ <a href="#" class="social-icon">
+                        <svg xmlns="www.w3.org" width="40" height="40" viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="20" fill="#009a9e"/>
+    <!-- SVG del icono centrado como elemento de imagen o similar -->
+    <svg x="8" y="8" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="#FFFFFF" d="M12.525 2.1C14.73 2.1 14.935 2.1 14.935 2.1H17.75V4.92H14.935C14.935 4.92 14.935 4.92 14.935 4.92C14.935 4.92 14.935 7.155 14.935 9.18C14.935 11.205 14.935 11.41 14.935 11.41C14.935 11.41 14.935 11.41 14.935 11.41C14.935 11.41 12.525 11.41 10.315 11.41V14.23H14.935C14.935 14.23 17.75 14.23 17.75 14.23V17.05H14.935C14.935 17.05 14.935 19.46 14.935 21.67H12.12C12.12 19.46 12.12 17.05 12.12 17.05C12.12 17.05 9.49 17.05 7.28 17.05V14.23H12.12V11.41H7.28V8.59H12.12V5.77H7.28V2.95H12.525V2.1Z"/>
+    </svg>
+</svg>
+
+</a>
+                        <!-- Icono SVG de X -->
+ <a href="#" class="social-icon">
+                        <svg xmlns="www.w3.org" width="40" height="40" viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="20" fill="#009a9e"/>
+     <!-- SVG del icono centrado como elemento de imagen o similar -->
+    <svg x="8" y="8" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="#FFFFFF" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+</svg>
+</a>
+
+                        <!-- Icono SVG de YouTube -->
+ <a href="#" class="social-icon">
+                       <svg xmlns="www.w3.org" width="40" height="40" viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="20" fill="#009a9e"/>
+     <!-- SVG del icono centrado como elemento de imagen o similar -->
+    <svg x="8" y="8" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="#FFFFFF" d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.539 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.539-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+    </svg>
+</svg>
+
+           </a>             
+                    </div>
+
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        <span class="copyright-text">
+                            <img src="/img/wifiexpres_01.png" alt="" class="img-fluid mb-3">
+                        </span>
                     </div>
 
                 </div>
