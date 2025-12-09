@@ -184,7 +184,7 @@
   }
   .btn-app:hover {
   background-color: #332c24!important;
-    font-size: .9rem!important;
+    /*font-size: .9rem!important;*/
   color: #ffe07b;
   }
   .btn-app:active { 
@@ -315,7 +315,7 @@
   }
   .btn-app:hover {
   background-color: #332c24!important;
-    font-size: .9rem!important;
+    /*font-size: .9rem!important;*/
   color: #ffe07b;
   }
   .btn-app:active { 
@@ -380,7 +380,8 @@
   }
 
   .nav-link:active {
-    background-color: var(--main-btn-color) !important;
+    /* background-color: var(--main-btn-color) !important; */
+    background-color: white !important; 
   }
 
   .sidebar {
@@ -415,34 +416,4 @@
 .logo-responsiveNM {
   width: 210px;
   margin-left: 15px;
-}
-
-:root {
-    --color-primary: #10999F; /* Color principal (azul verdoso) */
-    --color-secondary: #101c4e; /* Fondo claro */
-    --color-text: #ffffff;
-    /* ALTURAS DE EJEMPLO (AJUSTA ESTOS VALORES A LA ALTURA REAL DE TUS MENÚS) */
-    --navbar-height: 70px; 
-    --menu-desktop-height: 40px; 
-    /* Cálculo de la altura total del banner */
-    --banner-dynamic-height: calc(100vh - var(--navbar-height) - var(--menu-desktop-height));
-    --color-primary: #10999F; /* Azul Verdoso (para botones y redes sociales) */
-    --color-main-footer: #162661; /* ¡NUEVO COLOR SOLICITADO! (Fondo principal) */
-    --color-bottom-footer: #101c4e; /* Fondo de Copyright (Ligeramente más oscuro que el principal) */
-    --color-dark-blue: #113c66; /* Azul Oscuro para Copyright Text */
-    --fondo-pagina: #113c66;
-}
-
-
-.navbar-rednetve {
-  background-color: var(--color-main-footer)!important;      
-  color: #fff !important;
-}    
-
-.navbar-nav {
-  color: white !important;
-}
-
-.nav-item {
-  color: white !important;
 }

@@ -50,5 +50,12 @@ window.addEventListener('show-form-centros', function (event) {
   $('#form-centros').modal('show');
 });
 
+window.addEventListener('alert', event => { 
+             toastr[event.detail.type](event.detail.message, 
+             event.detail.title ?? ''), toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                }
+            });
 /******/ })()
 ;

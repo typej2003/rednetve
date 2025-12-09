@@ -17,11 +17,11 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
 
+    const ROLE_ROOT = 'root';
     const ROLE_ADMIN = 'admin';
-    const ROLE_USER = 'user';
+    const ROLE_LIDERNEGOCIO = 'lidernegocio';
+    const ROLE_VENDEDOR = 'vendedor';
     const ROLE_CLIENTE = 'cliente';
-    const ROLE_AFIL = 'afiliado';
-    const ROLE_DELIVERY = 'delivery';
 
     /**
      * The attributes that are mass assignable.
@@ -87,9 +87,18 @@ class User extends Authenticatable implements MustVerifyEmail
         return true;
     }
 
-    public function isUser()
+    public function isRoot()
     {
-        if ($this->role !== self::ROLE_USER) {
+        if ($this->role !== self::ROLE_ROOT) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function isLiderNegocio()
+    {
+        if ($this->role !== self::ROLE_LIDERNEGOCIO) {
             return false;
         }
 
@@ -105,18 +114,9 @@ class User extends Authenticatable implements MustVerifyEmail
         return true;
     }
 
-    public function isAfil()
+    public function isVendedor()
     {
-        if ($this->role !== self::ROLE_AFIL) {
-            return false;
-        }
-
-        return true;
-    }
-
-    public function isDelivery()
-    {
-        if ($this->role !== self::ROLE_DELIVERY) {
+        if ($this->role !== self::ROLE_VENDEDOR) {
             return false;
         }
 
@@ -188,6 +188,33 @@ class User extends Authenticatable implements MustVerifyEmail
             $message->to($this->email);
             $message->subject($titulo);
         });
+    }
+
+    public function saldo()
+    {
+        if(auth()->user()->role == 'cliente')
+        {
+            $facturas = Facturas::where('user_id', auth()->user()->id)->get();
+
+            if(count($facturas) > 0)
+            {
+                $registro = $facturas->last();
+                $saldo = $registro->saldo;
+                $tasa =  new Tasa;
+                $cambiohoy = $tasa->tasaHoy(1);
+
+                $saldodolares = round($saldo/$cambiohoy, 2, PHP_ROUND_HALF_UP);    
+
+                return ['saldo' => $saldo, 'saldodolares' => $saldodolares];
+
+            }else{
+                return ['saldo' => 0, 'saldodolares' => 0];
+            }
+
+        }else{
+            return ['saldo' => 0, 'saldodolares' => 0];
+        }
+        
     }
 
 }

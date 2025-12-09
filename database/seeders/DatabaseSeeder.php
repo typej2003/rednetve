@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             PromocionSeeder::class,
             DeliveryAreaSeeder::class,
             RouterSeeder::class,
+            FacturasSeeder::class,
         ]);
     }
 }

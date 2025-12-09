@@ -1,4 +1,5 @@
 <!-- <nav class="main-header navbar navbar-expand navbar-white navbar-light fixed-top "> -->
+<link rel="stylesheet" href="/css/css_rednetve.css">
 
 <nav class="main-header navbar navbar-expand navbar-white navbar-rednetve">
     <!-- Left navbar links -->
@@ -15,7 +16,7 @@
                 <img src="{{ auth()->user()->avatar_url }}" id="profileImage" class="img-circle elevation-1" alt="User Image" style="height: 30px; width: 30px;">
                 <span class="ml-1 w-full" x-ref="username">Hola, {{ auth()->user()->name }}</span>
             </a>
-            <div class="dropdown-menu my-5" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu my-3" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="profileLink">Perfil</a>
                 <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="profileLink">Mi Cuenta</a>
                 <a class="dropdown-item d-none" href="{{ route('admin.profile.edit') }}" x-ref="profileLink">Mis Listas de Deseos</a>

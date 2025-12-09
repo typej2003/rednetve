@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "barryvdh/laravel-dompdf": "^2.2",
         "darryldecode/cart": "^4.2",
         "evilfreelancer/routeros-api-php": "^1.5",
         "fideloper/proxy": "^4.4",
@@ -21,6 +22,9 @@
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.3",
         "maatwebsite/excel": "^3.1",
+        "simplehtmldom/simplehtmldom": "^2.0@RC",
+        "symfony/css-selector": "^7.4",
+        "symfony/dom-crawler": "^7.4",
         "twilio/sdk": "^8.3"
     },
     "require-dev": {

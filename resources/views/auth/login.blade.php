@@ -40,25 +40,7 @@
     
             <form action="{{ route('autenticar') }}" method="POST">
                 @csrf
-                <div class="form-group my-2>
-                    <div class="row mx-auto" >
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <label for="user">Usuario</label>
-                            <input type="text" name="user" class="form-control inputForm" placeholder="Correo Electrónico" id="userW">
-                        </div>
-                    </div>
-                    @error('user')
-                    <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <div class="form-group my-2">
-                    <div class="row mx-auto" >
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <p>o</p>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="form-group my-2">
                     <div class="row mx-auto" >
                         <div class="col-xs-12 col-sm-12 col-md-12">

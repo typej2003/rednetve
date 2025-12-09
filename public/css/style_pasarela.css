@@ -1,0 +1,527 @@
+            body {
+                margin: 0; /* Elimina el margen predeterminado del navegador */
+                height: 100vh; /* Hace que el body ocupe el 100% de la altura de la ventana */
+                /*position: relative; /* Necesario para que las posiciones absolutas se basen en el body */
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            a:link,
+            a:visited,
+            a:hover,
+            a:active {
+            text-decoration: none; /* Este es el estilo principal para quitar la línea */
+            }
+
+            .text-orange {
+                color: #F5710F;
+            }
+
+            .text-violet {
+                color: #6500DB;
+            }
+            .body-acceso {
+                background-color: #6500DB;
+            }
+            #cabecera {
+                background-color: #6500DB;
+                color: #333;
+                text-align: center;
+                height: 20vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                background-image: url("wifiexpress_logo.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 80%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #cabecera-slogan {
+                background-color: #6500DB;
+                color: #333;
+                text-align: center;
+                height: 20vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                background-image: url("wifiexpress_logo.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 80%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #contenido {
+                background-color: #F5710F;
+                color: #333;
+                text-align: center;
+                height: 100%; /* 60% de la altura de la ventana del navegador */
+                position: absolute;
+                top: 20vh; /* Comienza donde termina la cabecera */
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                overflow: scroll; /* Añade scroll si el contenido excede la altura */
+            }
+
+            
+
+            #contenido-acceso {
+                background-color: #ffffff;
+                color: #6500DB;
+                height: 65vh; /* 60% de la altura de la ventana del navegador */
+                position: absolute;
+                
+                width: 100%; /* Ocupa todo el ancho */
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #contenido-planes {
+                background-color: #ffffff;
+                height: 70vh; /* 60% de la altura de la ventana del navegador */
+                position: absolute;
+                top: 20vh; /* Comienza donde termina la cabecera */
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+            }
+            #pie-acceso {
+                background-color: #6500DB;
+                color: #fff;
+                text-align: center;
+                height: 10vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                display: flex;
+                flex-direction: column;
+                background-image: url("wifiexpress_logo2.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 40%;
+            }
+
+            #pie-planes {
+                background-color: #6500DB;
+                color: #fff;
+                text-align: center;
+                height: 10vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                display: flex;
+                flex-direction: column;
+                background-image: url("wifiexpress_logo2.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 40%;
+            }
+
+            img {
+            max-width: 100%; /* La imagen no será más ancha que su contenedor */
+            height: auto;    /* Mantiene la proporción original de la imagen */
+            }
+
+            #pie {
+                background-color: #6500DB;
+                color: #fff;
+                text-align: center;
+                height: 30vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                display: flex;
+                flex-direction: column;
+            }
+
+            #pie-acceso {
+                background-color: #6500DB;
+                color: #fff;
+                text-align: center;
+                height: 15vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                display: flex;
+                flex-direction: column;
+                background-image: url("wifiexpress_logo2.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 40%;
+            }
+
+            label {
+                color: #000;
+                font-weight: bold;
+            }
+            .inputForm {
+                border-radius: 15px !important;
+                width: 100% !important;
+                margin-top: 15px;
+            }
+
+            .inputForm:focus{
+                border-color: #6500DB !important;
+            }
+            
+
+            .btn-iniciar {
+                background-color: #F5710F;
+                border-radius: 50%;
+                border-color: #34016e;
+                color: white;
+                width: 80%;
+            }
+
+            .btn-registrar {
+                 background-color: #8E45E5;
+                 border-radius: 50%;
+                 border-color: #34016e;
+                 color: white;
+                 width: 80%;
+            }
+            .btn-sesion {
+                background-color: #6500DB;
+                border-radius: 15px;
+                border-color: #34016e;
+                color: white;
+                width: 80%;
+            }
+           
+            
+            .contenedor {
+                top: 20vh;
+                position: relative; /* Base para posicionar elementos hijos */
+                display: inline-block; /* Ajusta el tamaño del contenedor */
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                background-color: #000;
+            }
+            .contenedor-acceso {
+                top: 20vh;
+                position: relative; /* Base para posicionar elementos hijos */
+                display: inline-block; /* Ajusta el tamaño del contenedor */
+                display: flex;
+                flex-direction: column;
+                height: 70vh;
+                background-color: #6500DB;
+            }
+
+            .contenedor img {
+            position: absolute; /* Opcional si el fondo no usa absolute */
+            top: 0;
+            left: 0;
+            width: 100%; /* Para que la imagen ocupe el contenedor */
+            height: auto;
+            }
+
+            .contenedor img:first-of-type { /* O la clase específica de la imagen de fondo */
+            position: static; /* Si quieres que la de fondo no se mueva */
+            z-index: 1; /* Valor más bajo para el fondo */
+            }
+
+            .contenedor a img:last-of-type { /* O la clase específica de la imagen de capa */
+            z-index: 2; /* Valor más alto para que quede arriba */            
+            width: 70%;
+            }
+            .imagen-planes {
+                position: absolute; /* Opcional si el fondo no usa absolute */
+                top: 60%;
+                left: 0;
+                z-index: 3;
+
+            }
+            .fondo {
+                margin-top: auto; /* Empuja la imagen al final del contenedor */
+                margin-bottom: 15px;
+            }
+            .imagen-final {
+            margin-top: auto; /* Empuja la imagen al final del contenedor */
+            width: 50% !important;
+            }
+            .texto-cabecera-fondo {
+                margin-top: auto; /* Empuja la imagen al final del contenedor */
+                margin-bottom: 20px;
+            }
+            .texto-pie-fondo {
+                margin-top: auto; /* Empuja la imagen al final del contenedor */
+                margin-bottom: 2%;
+            }
+
+            @media screen and (max-width: 480px) {
+            /* Estilos para móviles */
+            }
+            @media screen and (min-width: 481px) and (max-width: 768px) {
+            /* Estilos para tabletas */
+            }
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+            /* Estilos para pantallas pequeñas/portátiles */
+            }
+            @media screen and (min-width: 1025px) {
+            /* Estilos para escritorios */
+                .contenedor img {
+                    position: absolute; /* Opcional si el fondo no usa absolute */
+                    top: 0;
+                    left: 0;
+                    width: 50vw; /* Para que la imagen ocupe el contenedor */
+                    height: auto;
+                }
+
+                .contenedor img:first-of-type { /* O la clase específica de la imagen de fondo */
+                position: static; /* Si quieres que la de fondo no se mueva */
+                z-index: 1; /* Valor más bajo para el fondo */
+                }
+
+                .contenedor img:last-of-type { /* O la clase específica de la imagen de capa */
+                z-index: 2; /* Valor más alto para que quede arriba */
+                top: 50%;
+                width: 40%;
+                left: 50%;
+                }
+
+                #cabecera {
+                background-color: #6500DB;
+                color: #333;
+                text-align: center;
+                height: 20vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                background-image: url("wifiexpress_logo.png");
+                background-repeat: no-repeat;
+                background-position: 50% 40%;
+                background-size: 60%;
+                display: flex;
+                flex-direction: column;
+            }
+
+                #pie-acceso {
+                background-color: #6500DB;
+                color: #fff;
+                text-align: center;
+                height: 15vh; /* 20% de la altura de la ventana del navegador */
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%; /* Ocupa todo el ancho */
+                display: flex;
+                flex-direction: column;
+                background-image: url("wifiexpress_logo2.png");
+                background-repeat: no-repeat;
+                background-position: 50% 20%;
+                background-size: 10%;
+            }
+            }
+
+    /* style para la pasarela*/
+    .bg-white-lg-none {
+        background-color: #db0032;
+        padding: 0.74rem 0.95rem;
+    }
+
+
+    .navbar-white {
+        margin: 0px;
+        padding: 0px;
+        background-color: #fff;
+    }
+
+    #spinner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: opacity 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #spinner.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btn-primary {
+    color: #fff !important;
+    background-color: #db0032 !important;
+    border-color: #db0032 !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #ED6D8F !important;
+        border-color: #ED6D8F !important;
+    }
+
+    .btn-primary:active {
+        background-color: #db0032 !important;
+        border-color: #ED6D8F !important;
+    }
+
+    .btn-primary:focus {
+        background-color: #db0032 !important;
+        border-color: #ED6D8F !important;
+        box-shadow: 0 0 0 0.2rem rgba(239, 117, 117, 0.5) !important;
+    }
+
+    .form-control:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .form-select:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .form-check-input:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: black;
+    }
+
+    .form-check-input:checked {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .link {
+        color: #0d6efd;
+    }
+
+    .link:hover {
+        color: #0d6efd;
+    }
+
+    .link:active {
+        color: #0d6efd !important;
+    }
+
+    .nounderline {
+        text-decoration: none !important
+    }
+
+    .brand-logo > img {
+        margin-left: 20px;
+    }
+
+    .form-control.is-valid:focus, .was-validated :valid.form-control {
+        border-color: #dddddd !important;
+        background-image: inherit !important;
+        box-shadow: inherit !important;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .form-check-input {
+        font-size: x-large;
+    }
+
+    /* Style para la pagina de planes */
+    .card-header {
+        text-align: center !important;
+        font-weight: bold;
+    }
+    .card-body {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .card-ficha {
+        /* width: 320px !important; */
+        width: 100% !important;
+        min-height: 400px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .card-ficha-pasarela {
+        width: 100% !important;
+        height: 1000px !important;
+        margin: auto !important;
+        padding: 0 !important;
+    }
+    .iframeClass {
+        width: 100% !important; 
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    #iframePasarela {
+        width: 100% !important;
+        /* background-color: #0d6efd !important; */
+        
+    }
+    .mi-lista-transparente {
+            background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+            padding: 10px; /* Ajusta el padding según sea necesario */
+            background-color: transparent !important;
+        }
+    .list-group-item {
+        background-color: transparent !important; /* Asegura que los items también sean transparentes */
+        border: 0;
+    }
+    p {
+        /* background-color: blueviolet !important; */
+    }
+    .green {
+        background-color: rgb(101, 233, 68);
+    }
+    .red {
+        background-color: rgb(255, 35, 46);
+    }
+
+    .card-contenido {
+        width: 100% !important;
+        /*background-color: green !important;*/
+    }
+
+    .card-contenido-login {
+        width: 100% !important;
+        /*background-color: green !important;*/
+    }
+
+    .radios {
+    }
+    .form-check-input{
+        padding: 0px !important;
+        margin: 0 !important;
+    }
+    .form-check-label {
+        padding: 0px !important;
+        margin: 0 !important;
+    }
+
+    .gif-cargando {
+        display: none; /* Ocultar inicialmente */
+        position: fixed; /* Para que sobresalga de todos los elementos */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('cargando.gif'); /* Enlaza tu GIF */
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1000; /* Asegura que esté en la parte superior */
+    }

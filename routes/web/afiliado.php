@@ -16,6 +16,7 @@ use App\Http\Livewire\Afiliado\ListStatusPedidos;
 use App\Http\Livewire\Afiliado\ListPedidosDelivery;
 use App\Http\Livewire\Afiliado\Product\ListCombos;
 use App\Http\Livewire\Afiliado\ListTasas;
+use App\Http\Livewire\Afiliado\Scraping;
 use App\Http\Livewire\Afiliado\Product\Repuestoexpres\NewProductRE;
 use App\Http\Livewire\Afiliado\Product\Repuestoexpres\NewComboRE;
 use App\Http\Livewire\Afiliado\ListBrand;

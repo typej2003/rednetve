@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedNetVe</title>
+    <title>Navbar de Tres Secciones - Vista SOLO PC</title>
     
     <!-- Enlace a Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjHh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -300,24 +300,6 @@
                     <div class="d-flex align-items-center ms-3">
                         <!-- Mi Rednet (dropdown) -->
                         <div class="dropdown me-2">
-                            @auth
-                            <a class="nav-link dropdown-toggle d-flex align-items-center p-0 text-dark" href="#" id="miRednetDropdownLeft" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-page="mi-rednet">
-                                <img src="img/icono_mirednet.svg" alt="Mi Rednet" class="nav-icon me-2" onerror="this.onerror=null;this.src='https://placehold.co/20x20/007bff/fff?text=R';" style="max-width:20px;">
-                                <span>{{auth()->user()->name}}</span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="miRednetDropdownLeft">
-                                @if(auth()->user()->role == 'admin')
-                                    <a class="dropdown-item" href="/admin/dashboard">Escritorio</a>
-                                    <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="profileLink">Perfil</a>
-                                    <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="changePasswordLink">Cambiar Contraseña</a>
-                                    <a class="dropdown-item" href="{{ route('admin.settings') }}">Configuración</a>
-                                @endif
-                                <div class="dropdown-divider"></div>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Salir</a>
-                                </form>
-                            </div>
-                            @else                            
                             <a class="nav-link dropdown-toggle d-flex align-items-center p-0 text-dark" href="#" id="miRednetDropdownLeft" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-page="mi-rednet">
                                 <img src="img/icono_mirednet.svg" alt="Mi Rednet" class="nav-icon me-2" onerror="this.onerror=null;this.src='https://placehold.co/20x20/007bff/fff?text=R';" style="max-width:20px;">
                                 <span>Mi Rednet</span>
@@ -326,7 +308,6 @@
                                 <a class="dropdown-item" href="/login">Login</a>
                                 <a class="dropdown-item" href="#">Salir</a>
                             </div>
-                            @endauth
                         </div>
                     </div>
                     

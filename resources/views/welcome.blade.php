@@ -8,418 +8,9 @@
     <!-- Enlace a Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjHh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Variables y Estilos Generales */
-        :root {
-            --color-primary: #10999F; /* Color principal (azul verdoso) */
-            --color-secondary: #f8f9fa; /* Fondo claro */
-            --color-text: #343a40;
-
-            /* ALTURAS DE EJEMPLO (AJUSTA ESTOS VALORES A LA ALTURA REAL DE TUS MENÚS) */
-            --navbar-height: 70px; 
-            --menu-desktop-height: 40px; 
-
-            /* Cálculo de la altura total del banner */
-            --banner-dynamic-height: calc(100vh - var(--navbar-height) - var(--menu-desktop-height));
-        }
-
-        .navbar-custom {
-            background-color: var(--color-secondary);
-            border-bottom: 1px solid #e9ecef;
-            min-height: 70px; /* Altura mínima para asegurar el espacio */
-        }
-
-        /* ------------------------------------------------------------------ */
-        /* ESTRUCTURA CLAVE DE TRES COLUMNAS (Desktop) */
-        /* ------------------------------------------------------------------ */
-        .navbar-content-container {
-            /* PROPIEDADES CRUCIALES PARA LA DISTRIBUCIÓN */
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* Distribuye Logo y Login a los extremos */
-            width: 100%;
-            height: 100%; /* Asegura que ocupe la altura del nav */
-        }
-
-        /* 1. Section-Logo (Izquierda) */
-        .section-logo {
-            flex-shrink: 0; /* Asegura que mantenga su tamaño */
-            /* Padding para separar del borde izquierdo */
-            padding: 0 1rem 0 1rem; 
-        }
-
-        /* 2. Section-Search (Centro - EXPANDIDO) */
-        .section-search {
-            flex-grow: 1; /* <-- ESTO HACE QUE SE ESTIRE y ocupe el espacio central */
-            max-width: 420px; /* Reducido a 420px para una barra de búsqueda más compacta */
-            margin: 0 1.5rem; /* Margen para separar visualmente del logo y login */
-        }
-        
-        /* 3. Section-Login (Derecha) */
-        .section-login {
-            flex-shrink: 0; /* Asegura que mantenga su tamaño */
-            /* Padding para separar del borde derecho */
-            padding: 0 1rem 0 0; 
-        }
-
-        /* Estilo para el Input y Botón de Búsqueda */
-        .form-control-search {
-            border-radius: 0.5rem 0 0 0.5rem;
-        }
-        .btn-custom-primary {
-            background-color: var(--color-primary);
-            border-color: var(--color-primary);
-            color: white;
-            border-radius: 0 0.5rem 0.5rem 0; 
-            transition: background-color 0.3s;
-        }
-        .btn-custom-primary:hover {
-            background-color: #0b7a7f;
-            border-color: #0b7a7f;
-            color: white;
-        }
-        /* Color hover para items de dropdown */
-        .dropdown-menu .dropdown-item:hover {
-            background-color: var(--color-main-footer) !important;
-            color: #fff !important;
-        }
-        /* --- Estilos para el menú de escritorio (sin subrayado) y dropdown por hover --- */
-        .menu-desktop a {
-            text-decoration: none !important;
-            color: #ffffff !important;
-        }
-        .menu-desktop .dropdown,
-        .menu-desktop .dropdown-submenu {
-            position: relative;
-        }
-        .btn-secondary {
-            background-color: var(--color-dark-blue);
-        }
-        @media (min-width: 768px) {
-            .menu-desktop .dropdown:hover > .dropdown-menu {
-                display: block;
-            }
-            .menu-desktop .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background: #009b9f;
-                border: none;
-                min-width: 200px;
-                z-index: 2000;
-                padding: .25rem 0;
-            }
-            .menu-desktop .dropdown-menu .dropdown-item {
-                color: #fff !important;
-                padding: .5rem 1rem;
-            }
-            .menu-desktop .dropdown-submenu:hover > .dropdown-menu {
-                display: block;
-                top: 0;
-                left: 100%;
-                min-width: 180px;
-            }
-        }
-
-        /* --- 2. Tabletas (Se aplica si el ancho es menor a 1024px) --- */
-        @media (max-width: 768px) {
-            body {
-                background-color: lightgreen; /* Color de fondo en tabletas */
-                font-size: 18px;
-            }
-
-            .section-search {
-                display: none;
-            }
-
-            .menu-desktop {
-                display: none;
-            }
-        }
-
-            /* --- 3. Móviles (Se aplica si el ancho es menor a 600px) --- */
-        @media (max-width: 600px) {
-            body {
-                background-color: lightblue; /* Color de fondo en móviles */
-                font-size: 16px;
-            }
-
-            .section-search {
-                display: none;
-            }
-
-            .menu-desktop {
-                display: none;
-            }
-        }
-    </style>
-    <!-- footer -->
-    <style>
-        /* Variables de Color Actualizadas */
-        :root {
-            --color-primary: #10999F; /* Azul Verdoso (para botones y redes sociales) */
-            --color-main-footer: #162661; /* ¡NUEVO COLOR SOLICITADO! (Fondo principal) */
-            --color-bottom-footer: #101c4e; /* Fondo de Copyright (Ligeramente más oscuro que el principal) */
-            --color-dark-blue: #113c66; /* Azul Oscuro para Copyright Text */
-        }
-
-        /* ------------------------------------------------------------------ */
-        /* PIE DE PÁGINA: Fila Superior (4 Columnas) */
-        /* ------------------------------------------------------------------ */
-
-        .footer-top {
-            background-color: var(--color-main-footer); /* Usando el nuevo color #162661 */
-            color: white; /* Color de las letras: Blanco */
-            padding: 3rem 0;
-        }
-
-        /* Estilo para los títulos y etiquetas */
-        .footer-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-        }
-        .footer-link, .footer-text {
-            color: #ccc; /* Gris claro para el texto secundario */
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.25rem;
-            font-size: 0.95rem;
-        }
-        .footer-link:hover {
-            color: var(--color-primary);
-        }
-        /* Ajuste específico para las líneas de horario */
-        .footer-top .col-md-3:nth-child(3) .footer-text {
-            margin-bottom: 0.5rem; 
-        }
-
-        /* ------------------------------------------------------------------ */
-        /* PIE DE PÁGINA: Fila Inferior (Copyright y Redes Sociales) */
-        /* ------------------------------------------------------------------ */
-        .footer-bottom {
-            background-color: var(--color-bottom-footer); /* Usando el azul oscuro de contraste */
-            color: white;
-            padding: 1rem 0;
-            font-size: 0.9rem;
-        }
-
-        /* Estilo específico para el texto de Copyright */
-        .copyright-text {
-            color: var(--color-dark-blue); /* Color solicitado: Azul Oscuro #003366 */
-            font-weight: 500;
-        }
-
-        /* Estilos para los Iconos de Redes Sociales */
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            background-color: var(--color-primary); /* Fondo: #10999f */
-            border-radius: 50%; /* Iconos Redondos */
-            color: white; /* Iconos: Color Blanco */
-            transition: transform 0.3s ease;
-            margin-left: 0.5rem; /* Separación entre iconos */
-        }
-        .social-icon:hover {
-            transform: scale(1.1);
-            background-color: #0b7a7f;
-        }
-
-        /* ------------------------------------------------------------------ */
-        /* RESPONSIVIDAD (Ajustes para Móviles) */
-        /* ------------------------------------------------------------------ */
-        @media (max-width: 767.98px) {
-            .footer-top .col-md-3 {
-                margin-bottom: 2rem;
-            }
-            .footer-bottom .text-md-end {
-                text-align: start !important;
-                margin-top: 0.5rem;
-            }
-            .social-icon {
-                margin-left: 0;
-                margin-right: 0.5rem;
-            }
-        }
-    </style>
-    <!-- inicio -->
-    <style>
-        /* ------------------------------------------------------------------ */
-        /* SECCIÓN INICIO SOLICITADA */
-        /* ------------------------------------------------------------------ */
-        #inicio {
-            margin-top: 120px;
-            /* 1. Aplica la altura dinámica calculada */
-            height: var(--banner-dynamic-height);
-            width: 100%;
-            overflow: hidden; /* Evita barras de desplazamiento si hay un desbordamiento mínimo */
-        }
-        
-        #section-body {
-            /* 2. El contenedor toma el 100% del alto de la sección principal */
-            width: 100%;
-            height: 100%;
-        }
-
-        #section-body img {
-            /* 3. La imagen ocupa todo el contenedor (#section-body) */
-            width: 100%; 
-            height: 100%;
-            /* 4. Propiedad clave para responsividad: ajusta la imagen sin distorsionarla */
-            object-fit: cover; 
-            display: block;
-        }
-    </style>
-
-    <style>
-        /* ======================================= */
-        /* CSS Base para Altura y Flexibilidad Vertical */
-        /* ======================================= */
-        
-        /* Contenedor principal: Ocupa el 100% de la altura del viewport y usa Flexbox en columna. */
-        #nosotros {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        /* ======================================= */
-        /* Fila 1 (Cabecera): 10% y Responsividad Horizontal */
-        /* ======================================= */
-
-        .section-title {
-            background-color: #10999F; /* Color solicitado */
-            flex-shrink: 0; /* Evita que la cabecera se reduzca */
-            /* En móvil, la altura es automática para apilar los elementos (display: flex + flex-direction: column) */
-            height: auto; 
-            padding-top: 0.5rem; 
-            padding-bottom: 0.5rem;
-        }
-
-        /* Media Query para Tablet y PC (md: 768px en Bootstrap) */
-        @media (min-width: 768px) {
-            .section-title {
-                height: 10%; /* Fija la altura al 10% en pantallas grandes */
-                padding: 0; /* Elimina padding vertical extra en PC */
-            }
-        }
-        
-        /* Aseguramos que los elementos internos en PC estén alineados */
-        .header-content {
-            height: 100%;
-        }
-
-
-        /* ======================================= */
-        /* Fila 2 (Cuerpo): 90% y Adaptación de Imagen */
-        /* ======================================= */
-        
-        #section-body {
-            flex-grow: 1; /* Ocupa todo el espacio vertical restante (el 90% dinámico) */
-            padding: 0 !important; /* Quitar padding de Bootstrap para que la imagen toque los bordes */
-            overflow: hidden; 
-        }
-        
-        /* Estilos de la imagen para ADAPTACIÓN RESPONSIVA */
-        #section-body img {
-            width: 100%;
-            height: 100%;
-            /* object-fit: cover asegura que la imagen cubra completamente el área sin distorsionarse */
-            object-fit: cover; 
-            display: block;
-        }
-
-        /* Estilos específicos para el menú en móvil */
-        .navbar-nav-mobile-flex {
-            display: flex;
-            flex-direction: column; /* Apila los enlaces en móvil */
-            width: 100%;
-            text-align: center;
-        }
-        @media (min-width: 768px) {
-            .navbar-nav-mobile-flex {
-                flex-direction: row; /* Vuelve a línea en PC */
-                justify-content: flex-end; /* Alinea a la derecha en PC */
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="/css/css_rednetve.css">
     
-    <style>
-        /* --- Estilos Personalizados --- */
-        #servicios {
-            background-image: url('img/servicio.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;            
-            padding-bottom: 40px;
-            height: 85vh;
-        }
-        /* .section-title {
-            background-color: #10999F;
-            padding: 15px;
-        } */
-        /* CAMBIO: Título principal a blanco con margen a la izquierda */
-        .titulo-servicios {
-            color: #FFFFFF; /* Color blanco */
-            margin: 0;
-            text-align: left !important; /* Asegura alineación izquierda */
-            margin-left: 15px; /* Margen a la izquierda (ajusta este valor si es necesario) */
-            
-        }
-
-        .boton-servicio {
-            display: block; 
-            aspect-ratio: 1 / 1; 
-            width: 100%; 
-            max-width: 150px; 
-            /* border: 1px solid #ccc;  */
-            border-radius: 15px; 
-            margin: 0 auto;
-        }
-
-        /* CAMBIO: Subtítulos a blanco */
-        .item-text {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #FFFFFF; /* Color blanco */
-            text-align: center;
-        }
-        
-        /* Definición de Imágenes Normales y Hover (mantengo tus rutas originales) */
-        #btn-servicio-1 { 
-            background-image: url('img/boton_residencial_01.png'); 
-            background-size: 100% auto;
-        }
-        #btn-servicio-2 { background-image: url('img/boton_pyme_01.png'); background-size: 100% auto;}
-        #btn-servicio-3 { background-image: url('img/boton_corporativo_01.png'); background-size: 100% auto;}
-        #btn-servicio-4 { background-image: url('img/boton_isp_01.png'); background-size: 100% auto;}
-
-        #btn-servicio-1:hover { background-image: url('img/boton_residencial_01.png'); border: 2px solid #ffffff; }
-        #btn-servicio-2:hover { background-image: url('img/boton_pyme_02.png'); border: 2px solid #ffffff; }
-        #btn-servicio-3:hover { background-image: url('img/boton_corporativo_02.png'); border: 2px solid #ffffff; }
-        #btn-servicio-4:hover { background-image: url('img/boton_isp_02.png'); border: 2px solid #ffffff; }
-    </style>
-    <style>
-        section[id] {
-            scroll-margin-top: 125px; 
-        }
-        
-    </style>
-    
+    <link rel="stylesheet" href="{{ asset('/css/element_3D.css') }}">
 </head>
 <body>
 
@@ -433,7 +24,7 @@
 
                 <!-- 1. LOGO (Izquierda) -->
                 <div class="section-logo">
-                    <a class="navbar-brand p-0" href="#">
+                    <a class="navbar-brand p-0" href="/">
                         <img src="img/logo_rednet.png" 
                              class="img-fluid" style="max-width:140px;" alt="Logo Rednet">
                     </a>
@@ -464,15 +55,19 @@
                         <div class="dropdown me-2">
                             @auth
                             <a class="nav-link dropdown-toggle d-flex align-items-center p-0 text-dark" href="#" id="miRednetDropdownLeft" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-page="mi-rednet">
-                                <img src="img/icono_mirednet.svg" alt="Mi Rednet" class="nav-icon me-2" onerror="this.onerror=null;this.src='https://placehold.co/20x20/007bff/fff?text=R';" style="max-width:20px;">
+                                <img src="{{ auth()->user()->avatar_url }}" id="profileImage" class="profileImage img-circle elevation-2" alt="User Image">
                                 <span>{{auth()->user()->name}}</span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="miRednetDropdownLeft">
-                                @if(auth()->user()->role == 'admin')
+                                @if(auth()->user()->role == 'root' || auth()->user()->role == 'admin')
                                     <a class="dropdown-item" href="/admin/dashboard">Escritorio</a>
                                     <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="profileLink">Perfil</a>
                                     <a class="dropdown-item" href="{{ route('admin.profile.edit') }}" x-ref="changePasswordLink">Cambiar Contraseña</a>
                                     <a class="dropdown-item" href="{{ route('admin.settings') }}">Configuración</a>
+                                @endif
+                                @if(auth()->user()->role == 'cliente')
+                                    <a class="dropdown-item" href="{{ route('updateprofileclient') }}" x-ref="profileLink">Perfil</a>
+                                    <a class="dropdown-item" href="{{ route('updateprofileclient') }}" x-ref="changePasswordLink">Cambiar Contraseña</a>
                                 @endif
                                 <div class="dropdown-divider"></div>
                                 <form method="POST" action="{{ route('logout') }}">
@@ -486,7 +81,6 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="miRednetDropdownLeft">
                                 <a class="dropdown-item" href="/login">Login</a>
-                                <a class="dropdown-item" href="#">Salir</a>
                             </div>
                             @endauth
                         </div>
@@ -511,8 +105,8 @@
         <div class="w-100 my-1" style="background-color:#009b9f;">
             <div class="container">
                 <!-- Desktop menu: visible en md+ (con dropdown para SERVICIOS) -->
-                <nav class="menu-desktop d-md-flex justify-content-center align-items-center gap-4 py-2">
-                    <a href="/#inicio" data-page="inicio" class="text-white text-uppercase fs-6 mx-3">INICIO</a>
+                <nav class="menu-desktop">
+                    <a href="/" data-page="inicio" class="text-white text-uppercase fs-6 mx-3">INICIO</a>
                     <a href="/#nosotros" data-page="nosotros" class="text-white text-uppercase fs-6 mx-3">NOSOTROS</a>
 
                     <!-- SERVICIOS dropdown multinivel -->
@@ -523,9 +117,9 @@
                             <div class="dropdown-submenu">
                                 <a href="#" class="dropdown-item dropdown-toggle">Empresarial</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Pyme</a>
-                                    <a href="#" class="dropdown-item">Corporacion Plus</a>
-                                    <a href="#" class="dropdown-item">ISP</a>
+                                    <a href="/pyme" class="dropdown-item">Pyme</a>
+                                    <a href="/corporacionplus" class="dropdown-item">Corporacion Plus</a>
+                                    <a href="/isp" class="dropdown-item">ISP</a>
                                 </div>
                             </div>
                         </div>
@@ -535,11 +129,12 @@
                     <div class="dropdown mx-3">
                         <a href="#consulta" data-page="consulta" class="text-white text-uppercase fs-6 dropdown-toggle">CONSULTA</a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Mis Factura</a>
+                            <a href="/consultafacturas" class="dropdown-item">Mis Factura (consultas)</a>
+                            <a href="/mispagos" class="dropdown-item">Mis Pagos</a>
                         </div>
                     </div>
                     @endauth
-                    <a href="/formulario" class="text-white text-uppercase fs-6 mx-3">PAGUE AQUÍ</a>
+                    <a href="/pagueaqui" class="text-white text-uppercase fs-6 mx-3">PAGUE AQUÍ</a>
                 </nav>
 
                 <!-- Mobile header: visible en sm (muestra toggler) -->
@@ -559,24 +154,24 @@
                         <a href="/" class="text-white py-2 border-top">INICIO</a>
                         <a href="/#nosotros" class="text-white py-2 border-top">NOSOTROS</a>
                         <a href="/#servicios" class="text-white py-2 border-top">SERVICIOS</a>
-                        <a href="/formulario" class="text-white py-2 border-top">PAGUE AQUÍ</a>
+                        <a href="/pagueaqui" class="text-white py-2 border-top">PAGUE AQUÍ</a>
                     </nav>
                 </div>
 
             </div>
         </div>    
+
     </nav>
 
     <!-- JS de Bootstrap (necesario para el colapso del menú móvil) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
     <main class="">
         <!-- EL CÓDIGO DE LA SECCIÓN INICIO SOLICITADA -->
         <section id="inicio">
-            <div id="section-body">
+            <div id="inicio_container" class="section-body container-fluid p-0">
                 <!-- Nota: La ruta 'img/banner_empresa.jpg' no se cargará en este entorno. Se usa un placeholder. -->
-                <img src="img/banner_empresa.jpg" 
-                    alt="Banner de la empresa"
-                    onerror="this.src='https://placehold.co/1920x800/2980b9/ffffff?text=Error+al+cargar+img/banner_empresa.jpg'">
+                <img class="imagen-fondo" src="img/banner_empresa.jpg" alt="Banner de la empresa" onerror="this.src='https://placehold.co/1920x800/2980b9/ffffff?text=Error+al+cargar+img/banner_empresa.jpg'">
             </div>
         </section>
         <section id="nosotros">        
@@ -615,7 +210,7 @@
             </div>
             
             <!-- Fila 2: Contenido Principal (section-body) - 90% de Altura -->
-            <div id="section-body" class="container-fluid p-0">
+            <div class="section-body container-fluid p-0">
                 <!-- La imagen ocupa el 100% del ancho y el 100% de la altura de este div (el 90% dinámico) -->
                 <img 
                     src="img/Nosotros.jpg" 
@@ -625,7 +220,7 @@
             </div>
         </section>
         <section id="disfruta">
-            <div id="section-body">
+            <div class="section-body">
                 <!-- Nota: La ruta 'img/banner_empresa.jpg' no se cargará en este entorno. Se usa un placeholder. -->
                 <img src="img/disfruta.jpg" 
                     alt="Banner disfruta"
@@ -710,7 +305,7 @@
             </div>
             
             <!-- Fila 2: Contenido Principal (section-body) - 90% de Altura -->
-            <div id="section-body" class="container-fluid p-0">
+            <div id="" class="section-body container-fluid p-0">
                 <!-- La imagen ocupa el 100% del ancho y el 100% de la altura de este div (el 90% dinámico) -->
                 <img 
                     src="img/cobertura.png" 
@@ -798,6 +393,14 @@
         <!-- FILA 2: COPYRIGHT Y REDES SOCIALES (Dos Columnas) -->
         <div class="footer-bottom">
             <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12 align-items-center">
+                        <span class="copyright-text text-white">
+                                El servicio de Internet es provisto por la empresa XXX XXXX Venezuela, C.A. habilitada por CONATEL con el número AAA-00000
+                        </span>
+                    </div>
+                </div>
+                
                 <div class="row align-items-center">
                     
                     <!-- Columna 1: Derechos Reservados -->
@@ -827,4 +430,5 @@
     </footer>
 
 </body>
+<script src="{{ asset('/js/element_3D.js') }}"></script>
 </html>

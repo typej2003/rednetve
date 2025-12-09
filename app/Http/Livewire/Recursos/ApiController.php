@@ -73,7 +73,7 @@ class ApiController extends Component
     }
     
     public function recibirDatos(Request $request){
-	
+		
 		//return response()->json($request->get('campo'));
 
 		//Creación de solicitud de pago
@@ -105,13 +105,15 @@ class ApiController extends Component
 		$Payment->rifNumber= $request->get('rifNumber') ?? ''; //Número de cédula
 
 		$demo = "NO";
-		if( $demo == "SI" ){                
-			$PaymentProcess = new IpgBdv2 ("70527030","z0tTsYq3");
-		} else {
-			$PaymentProcess = new IpgBdv2 ("76669805","0Ih2wwzK");
-		}
+		if( $demo == "SI" ) {
+            $PaymentProcess = new IpgBdv2 ("70527030","z0tTsYq3");
+        } else {
+             $PaymentProcess = new IpgBdv2 ("76669805","0Ih2wwzK");
+        }
 
 		$response = $PaymentProcess->createPayment($Payment);
+
+		
 		
 		if ($response->success == true) // Se procesó correctamente y es necesario redirigir a la página de pago
 		{

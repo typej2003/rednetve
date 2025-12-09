@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'surnames' => 'Diaz',
             'email' => 'ddrsistemas@gmail.com',
             'password' => bcrypt('12345678'),
-            'role' => 'admin',
+            'role' => 'root',
             'created_at' => '2022-05-16 12:20:36',
             'updated_at' => '2022-05-16 12:20:36'
         ]);
@@ -45,11 +45,11 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'identificationNac' => 'V',
-            'identificationNumber' => '13053081',
-            'name' => 'jose',
-            'names' => 'José',
-            'surnames' => 'Rosales',
-            'email' => 'typej2003@gmail.com',
+            'identificationNumber' => '123456789',
+            'name' => 'admin',
+            'names' => 'admin',
+            'surnames' => 'ADMIN',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('12345678'),
             'role' => 'admin',
             'created_at' => '2022-05-16 12:20:36',
@@ -65,7 +65,71 @@ class UserSeeder extends Seeder
             'updated_at' => '2022-05-16 12:20:36'
         ]);
 
-       
+        DB::table('users')->insert([
+            'identificationNac' => 'V',
+            'identificationNumber' => '22222222',
+            'name' => 'lidernegocio',
+            'names' => 'lidernegocio',
+            'surnames' => 'LIDERNEGOCIO',
+            'email' => 'lidernegocio@gmail.com',
+            'password' => bcrypt('12345678'),
+            'role' => 'lidernegocio',
+            'created_at' => '2022-05-16 12:20:36',
+            'updated_at' => '2022-05-16 12:20:36'
+        ]);
+
+        DB::table('datos_basicos')->insert([
+            'user_id' => 1,
+            'cellphonecode' => '0416',
+            'cellphone' => '5800403',
+            'address' => 'Caracas, San Bernardino',
+            'created_at' => '2022-05-16 12:20:36',
+            'updated_at' => '2022-05-16 12:20:36'
+        ]);
+        
+        DB::table('users')->insert([
+            'identificationNac' => 'V',
+            'identificationNumber' => '33333333',
+            'name' => 'vendedor',
+            'names' => 'vendedor',
+            'surnames' => 'VENDEDOR',
+            'email' => 'vendedor@gmail.com',
+            'password' => bcrypt('12345678'),
+            'role' => 'vendedor',
+            'created_at' => '2022-05-16 12:20:36',
+            'updated_at' => '2022-05-16 12:20:36'
+        ]);
+
+        DB::table('datos_basicos')->insert([
+            'user_id' => 1,
+            'cellphonecode' => '0416',
+            'cellphone' => '5800403',
+            'address' => 'Caracas, San Bernardino',
+            'created_at' => '2022-05-16 12:20:36',
+            'updated_at' => '2022-05-16 12:20:36'
+        ]);
+
+        DB::table('users')->insert([
+            'identificationNac' => 'V',
+            'identificationNumber' => '44444444',
+            'name' => 'cliente',
+            'names' => 'cliente',
+            'surnames' => 'CLIENTE',
+            'email' => 'cliente@gmail.com',
+            'password' => bcrypt('12345678'),
+            'role' => 'cliente',
+            'created_at' => '2022-05-16 12:20:36',
+            'updated_at' => '2022-05-16 12:20:36'
+        ]);
+
+        DB::table('datos_basicos')->insert([
+            'user_id' => 1,
+            'cellphonecode' => '0416',
+            'cellphone' => '5800403',
+            'address' => 'Caracas, San Bernardino',
+            'created_at' => '2022-05-16 12:20:36',
+            'updated_at' => '2022-05-16 12:20:36'
+        ]);
 
     }
 }

@@ -18,10 +18,10 @@ class Administrator
     {
 
         if (auth()->check() && (auth()->user()->isAdmin() 
-            || auth()->user()->isUser()
             || auth()->user()->isCliente()
-            || auth()->user()->isAfil()
-            || auth()->user()->isDelivery())) 
+            || auth()->user()->isRoot()
+            || auth()->user()->isLiderNegocio()
+            || auth()->user()->isVendedor())) 
         {
             return $next($request);
         }

@@ -1,0 +1,247 @@
+/* Estilos base para todos los dispositivos */
+:root {
+    --main-bg-color:  #6500DB;
+    --main-bg-hover:  #8e54cf;
+    --main-btn-color: #ee853b;
+    --main-btn-hover: #ecac7d;
+    --menu-background-overlay: #fa8f6c; 
+    --main-footer-color: #FFCC2A;
+    --table-child1: #fdf2ea;
+    --table-child2: #fdf2ea;
+  }
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+}
+
+.card-body, .planes-body, iframe, .iframePasarela {
+    background-color: white !important;
+}
+
+.font-blue {
+    color: var(--main-bg-color);
+}
+
+.font-orage {
+    color: var(--main-btn-color);
+}
+
+.bg-violet {
+    background-color: var(--main-bg-color);
+}
+
+.rounded-15 {
+    border-radius: 15px;
+}
+
+input[type="text"] {
+  border-radius: 15px;
+}
+
+/* efecto con el input radio */
+input[type="radio"] {
+  display: none; /* Oculta el input nativo */
+}
+
+/* Crea un círculo visual que imita al radio */
+.label_radio::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Cambia el color de fondo cuando está seleccionado */
+input[type="radio"]:checked + label::before {
+  background-color: blue; /* Cambia el color de fondo */
+  border-color: blue; /* Cambia el borde */
+}
+
+/* Cambia el color del texto cuando está seleccionado */
+input[type="radio"]:checked + label {
+  color: blue;
+}
+
+.input-center {
+  text-align: center !important;
+}
+
+.bold-font {
+    font-weight: 600 !important;
+}
+
+header {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    
+    padding: 5px;
+    box-sizing: border-box; /* Para que el padding no aumente el tamaño */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    background-color: var(--main-bg-color);
+    color: #333;
+    text-align: center;
+    height: 15vh; /* 20% de la altura de la ventana del navegador */
+    
+    background-image: url("wifi_expres_logo_2.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 30% !important;
+    
+}
+
+main {
+    /* position: fixed; /* Posiciona respecto a la ventana del navegador */
+    /*top: 15%;      /* 20% desde el borde superior */
+     
+    padding: 1px;
+    /* background-color: lightgray; */
+    border-radius: 25px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 78vh;
+}
+
+footer {
+    /*position: fixed; /* Fija el elemento a la ventana */
+    bottom: 0; /* Lo pega al borde inferior */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    /* Otros estilos de tu footer */
+    background-color: rgb(113, 160, 248);
+
+    background-color: var(--main-bg-color);
+    color: #fff;
+    text-align: center;
+    height: 2vh; /* 20% de la altura de la ventana del navegador */
+    padding: 0 !important;
+    align-items: flex-start;
+}
+
+.card{
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.card-body.planes-body {
+    margin: 0 !important;
+    padding: 0px;
+}
+
+.card-body {
+    margin: 0 !important;
+    padding: 0px;
+    max-height: 60vh !important;
+}
+
+.btnSiguiente {
+    background-color: var(--main-btn-color);
+    color: white;
+}
+.btnSiguiente:hover {
+    background-color: var(--main-btn-hover);
+}
+.btnEnviar {
+    background-color: var(--main-btn-color);
+    color: white;
+}
+
+.btnAnterior {
+    background-color: var(--main-bg-color);
+    color: white;
+}
+.btnAnterior:hover {
+    background-color: var(--main-bg-hover);
+}
+
+.table {
+    text-transform: uppercase;
+    table-layout: auto;
+    margin: 0;
+    padding: 0;
+}
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: var(--table-child1);
+}
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: var(--table-child2);
+}
+.table-striped>thead>tr>th {
+    background-color: #eee;
+}
+
+.card-ficha {
+    /*background-color: greenyellow !important; */
+    height: 75vh !important;
+    overflow-y: auto;
+    overscroll-behavior: contain; /* Evita que el scroll afecte a la página principal */
+}
+
+.card-ficha-pasarela {
+    /*background-color: greenyellow !important; */
+    height: 75vh !important;
+    background-color: #ffffff;
+    padding: 0px !important;    
+    overflow-y: auto;
+    overscroll-behavior: contain; /* Evita que el scroll afecte a la página principal */
+}
+
+.body-pasarela {
+    height: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    /*border: #f01b1b solid 1px;*/
+    /*overflow: scroll !important;*/
+}
+
+.iframePasarela {
+    width: 80% !important;
+    height: 70vh !important;
+    background-color: #b63131;    
+    padding: 0px !important;
+    /*border: #333 solid 1px;*/
+}
+
+.bg-p {
+    background-color: var(--table-child1);
+}
+
+.bg-s {
+    background-color: var(--table-child2);
+}
+/* Consulta de medios para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    header {
+        background-size: 80% !important;
+    }
+    .text-biopago {
+        font-size: 18px;
+    }
+    .logo_bdv_biopago {
+        width: 70%;
+    }
+}
+
+/* Consulta de medios para pantallas de escritorio */
+@media (min-width: 769px) {
+    header {
+        background-size: 30% !important;
+    }
+}
+
+.container-pasarela {
+    width: 60% !important;
+}
+
+form-label {
+    text-align: left !important;
+}

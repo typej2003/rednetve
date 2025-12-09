@@ -29,7 +29,7 @@
         </div>
         <div class="form-group row">
             <div class="offset-sm-2 col-sm-10">
-                <button type="submit" class="btn btn-success"><i class="fa fa-save mr-1"></i> Guardar Cambios</button>
+                <button type="submit" class="btn btn-app"><i class="fa fa-save mr-1"></i> Guardar Cambios</button>
             </div>
         </div>
     </form>

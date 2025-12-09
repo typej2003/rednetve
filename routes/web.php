@@ -20,14 +20,11 @@ use App\Http\Livewire\Admin\Settings\ListMetodosPagos;
 
 use App\Http\Livewire\Recursos\ApiController;
 
-
-
 use App\Http\Livewire\Components\Star;
 
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 use App\Http\Livewire\Error\ShowError;
-
 
 
 Route::get('/star', Star::class)->name('star'); 

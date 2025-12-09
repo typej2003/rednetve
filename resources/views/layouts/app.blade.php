@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>RedNetVe</title>
@@ -8,7 +7,7 @@
     <meta name="keywords" content="vende, compra, Pan, Jamón, Pan de Jamón, Combos Navideños, Caracas, directo a tu mesa, @panexpres.vezla, Panexprés, Panexpres">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" type="x-icon" href="/img/panexpres_logo.png.png" />
+    <link rel="shortcut icon" type="x-icon" href="/img/logo_rednet.png" />
 
     <!-- Bootstrap CSS -->
 	    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -17,7 +16,7 @@
         <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->	    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="/css/showProducts.css">    
+    <link rel="stylesheet" href="/css/app_rednetve.css">
     
     @stack('styles')
     <livewire:styles />
@@ -30,34 +29,33 @@
     <body class="hold-transition sidebar-mini {{ setting('sidebar_collapse') ? 'sidebar-collapse' : '' }}">
     <div class="wrapper">
     @auth
-        @livewire('layouts.navbar-in')
-         <!-- /.navbar -->
-
-        <!-- Main Sidebar Container -->
-        @include('layouts.partials.aside_rednetve')
-
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            {{ $slot }}
-        </div>
-        <!-- /.content-wrapper -->
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-            <div class="p-3">
-                <h5>Title</h5>
-                <p>Sidebar content</p>
+        @if (auth()->user()->role=='admin')
+            @livewire('layouts.navbar-in')
+            @include('layouts.partials.aside_rednetve')
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                {{ $slot }}
             </div>
-        </aside>
-        <!-- /.control-sidebar -->
+            <!-- /.content-wrapper -->
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+                <div class="p-3">
+                    <h5>Title</h5>
+                    <p>Sidebar content</p>
+                </div>
+            </aside>
+            <!-- /.control-sidebar -->
 
-        <!-- Main Footer -->
+            <!-- Main Footer -->
         
-        @livewire('layouts.footer')
+            @livewire('layouts.footer')
+        @endif
+        @if (auth()->user()->role=='cliente')
+            {{ $slot }}
+        @endif
     </div>
     </body>
-
     <!-- ./wrapper -->
     @endauth
     
@@ -80,6 +78,4 @@
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" /> -->
-
-
 
