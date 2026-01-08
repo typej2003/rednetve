@@ -380,6 +380,22 @@
         </div>
     </section>
 
+    <section id="mapa" class="full-page-section section-mapa">
+        <div class="cinta-titulo">
+            <h2>Ubicación</h2>
+        </div>
+
+        <div class="overlay-clear"></div>
+        
+        <div class="container content-nosotros">
+            <div class="row align-items-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.7643418770738!2d-66.85163163051192!3d10.496144018017018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59c57747fd3d%3A0xb46cb189a1f198d8!2sEdificio%20Banco%20de%20Lara!5e0!3m2!1ses!2sve!4v1767851073885!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                
+            </div>
+        </div>
+    </section>
+
     <section id="servicios" class="full-page-section section-servicios">
         <div class="cinta-titulo">
             <h2>SERVICIOS</h2>
