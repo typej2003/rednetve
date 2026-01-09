@@ -101,8 +101,9 @@
         }
         .social-circle:hover {
             transform: translateY(-3px);
-            background-color: #007b7e;
+            background-color: #162661;
             color: white;
+            border: 1px solid #ffff;
         }
 
         @media (max-width: 991px) {   

@@ -27,6 +27,7 @@
         /* Efecto al pasar el ratón (opcional) */
         .whatsapp-float:hover {
             background-color: #162661; /* Un color ligeramente más oscuro al pasar el ratón */
+            border: 1px solid #ffff;
         }
 
         /* Ajuste del icono dentro del botón */

@@ -53,7 +53,7 @@
 
         /* --- SECCIÓN INICIO --- */
         .section-inicio {
-            background: url('/img/fondo/inicio.jpg') no-repeat center center;
+            background: url('/img/fondo/banner_principal.jpg') no-repeat center center;
             background-size: cover;
         }
 
