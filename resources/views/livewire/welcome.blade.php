@@ -1,3 +1,5 @@
+<div>
+    @livewire('layouts.components.whatsapp')
 <div id="main-wrapper">
     <style>
         :root {
@@ -245,19 +247,19 @@
         <div class="container text-center">
             <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
                 <div class="col">
-                    <a href="#" class="service-link text-decoration-none">
+                    <a href="/pyme" class="service-link text-decoration-none">
                         <img src="{{ asset('img/boton_pyme_01.jpg') }}" class="service-img img-fluid mb-3 shadow">
                         <h4 class="text-white fw-bold">PYME</h4>
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#" class="service-link text-decoration-none">
+                    <a href="/corporacionplus" class="service-link text-decoration-none">
                         <img src="{{ asset('img/boton_corporativo_01.jpg') }}" class="service-img img-fluid mb-3 shadow">
                         <h4 class="text-white fw-bold">CORPORATIVO</h4>
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#" class="service-link text-decoration-none">
+                    <a href="/isp" class="service-link text-decoration-none">
                         <img src="{{ asset('img/boton_isp_01.jpg') }}" class="service-img img-fluid mb-3 shadow">
                         <h4 class="text-white fw-bold">ISP</h4>
                     </a>
@@ -265,4 +267,5 @@
             </div>
         </div>
     </section>
+</div>
 </div>
