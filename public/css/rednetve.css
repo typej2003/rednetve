@@ -1,6 +1,6 @@
 /* Ajuste de scroll para el Navbar fijo */
 section[id] {
-    scroll-margin-top: 115px; 
+    scroll-margin-top: 0px; 
 }
 
 .profileImage {

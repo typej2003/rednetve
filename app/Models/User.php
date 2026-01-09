@@ -125,9 +125,11 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function datosbasicos()
     {
-        return $this->hasOne(PersonalInformation::class)->withDefault([
-            'telefono' => '',
-            'direccion' => '',
+        return $this->hasOne(PersonalInformation::class, 'user_id', 'id')->withDefault([
+            'cellphonecode' => '',
+            'cellphone' => '',
+            'msgcontact' => '',
+
         ]);
     }    
 

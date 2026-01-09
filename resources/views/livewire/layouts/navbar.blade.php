@@ -74,7 +74,7 @@
                             SERVICIOS <i class="bi bi-chevron-down small"></i>
                         </a>
                         <ul class="dropdown-menu-custom shadow">
-                            <li><a href="/residencial" class="dropdown-item-custom">Residencial</a></li>
+                            <li><a href="/residencial" class="dropdown-item-custom d-none">Residencial</a></li>
                             <li class="dropdown-submenu-custom">
                                 <a href="#" class="dropdown-item-custom d-flex justify-content-between align-items-center">
                                     Empresarial <i class="bi bi-chevron-right small"></i>
@@ -100,7 +100,7 @@
                     </div>
                     @endauth
 
-                    <div class="dropdown-rednet mx-3">
+                    <div class="dropdown-rednet mx-3 d-none">
                         <a href="/pagueaqui" class="text-white text-uppercase fs-6 nav-link-custom">PAGUE AQUÍ</a>
                     </div>
                 </nav>

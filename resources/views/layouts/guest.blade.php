@@ -16,7 +16,16 @@
     
     @livewireStyles
 </head>
+<style>
+    main {
+        margin: 0px !important;
+        padding: 0px !important;
+        z-index: 20000 !important;
+        margin-top: 35px !important;
+    }
+</style>
 <body>
+    
     @livewire('layouts.navbar')
 
     <main>

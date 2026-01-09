@@ -51,7 +51,7 @@
 
         .main-content {
             flex: 1;
-            padding: 20px;
+            padding: 0px;
             min-width: 0; 
             transition: all 0.3s ease-in-out; /* Para que el contenido se expanda suavemente */
         }
@@ -88,7 +88,7 @@
         @endauth
 
         <main class="main-content">
-            <div class="container-fluid py-4">
+            <div class="container-fluid">
                 {{ $slot }}
             </div>
         </main>

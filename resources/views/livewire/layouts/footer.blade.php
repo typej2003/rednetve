@@ -104,5 +104,11 @@
             background-color: #007b7e;
             color: white;
         }
+
+        @media (max-width: 991px) {   
+            .text-uppercase {
+                margin-bottom: 5px !important;
+            }         
+        }
     </style>
 </div>

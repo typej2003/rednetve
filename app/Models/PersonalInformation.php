@@ -14,6 +14,7 @@ class PersonalInformation extends Model
         'address',
         'cellphonecode',
         'cellphone',
+        'msgcontact',
     ];
 
     protected $appends = [

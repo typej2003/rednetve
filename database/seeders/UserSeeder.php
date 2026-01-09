@@ -31,6 +31,7 @@ class UserSeeder extends Seeder
             'user_id' => 1,
             'cellphonecode' => '0414',
             'cellphone' => '1899016',
+            'msgcontact'  => 'Hola, te asesoramos por  whatsapp gestiona tu compra por este canal.',
             'address' => 'Caracas, San Bernardino',
             'created_at' => '2022-05-16 12:20:36',
             'updated_at' => '2022-05-16 12:20:36'

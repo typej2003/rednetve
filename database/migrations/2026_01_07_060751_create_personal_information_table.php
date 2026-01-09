@@ -23,6 +23,7 @@ class CreatePersonalInformationTable extends Migration
                 ->onUpdate('cascade');
             $table->string('cellphonecode')->nullable();
             $table->string('cellphone')->nullable();
+            $table->string('msgcontact')->nullable()->default('Hola, te asesoramos por  whatsapp gestiona tu compra por este canal.');
             $table->string('address')->nullable();
             $table->timestamps();
         });
