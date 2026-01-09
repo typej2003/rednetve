@@ -150,6 +150,35 @@
             .linea-3 { font-size: 1.4rem; flex-direction: column; align-items: flex-start; }
             .resaltado-conectada { margin-left: 0; margin-top: 10px; }
         }
+
+        /* Animación de entrada desde la derecha */
+        .slide-from-right {
+            animation: slide-right-to-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        @keyframes slide-right-to-left {
+            0% { 
+                transform: translateX(100vw); 
+                opacity: 0; 
+            }
+            60% {
+                opacity: 1;
+            }
+            100% { 
+                transform: translateX(0); 
+                opacity: 1; 
+            }
+        }
+
+        /* Efecto opcional para que el bloque púrpura aparezca con un pequeño retraso */
+        .bloque-purpura {
+            animation: fade-in 1.5s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
     </style>
 
     <section id="inicio" class="full-page-section section-inicio">
