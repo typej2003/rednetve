@@ -159,6 +159,11 @@
                 z-index: 5;
                 color: white;
             }
+
+            .section-inicio {
+                background: url('/img/fondo/banner_rednetmovil.jpg') no-repeat center center;
+                background-size: cover;
+            }
         }
 
         /* Animación de entrada desde la derecha */
