@@ -26,7 +26,7 @@
                                  alt="Icono" 
                                  style="width: 45px;">
 
-                            <a href="#" class="btn btn-reunion-final rounded-pill px-4 py-2 fw-bold text-white text-uppercase">
+                            <a href="/solicitarcita/isp" class="btn btn-reunion-final rounded-pill px-4 py-2 fw-bold text-white text-uppercase">
                                 Solicitar una reunión <span class="ms-2">></span>
                             </a>
                         </div>
@@ -95,6 +95,10 @@
         background-color: #0a9aa0;
         border: none;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-reunion-final:hover {  
+        background-color: #162661;
     }
 
     /* Contenedor de texto sin márgenes forzados de Bootstrap */
