@@ -13,7 +13,8 @@
                         </div>
                         <h2 class="fw-bold" style="color: #162661;">¡Gracias por tu solicitud!</h2>
                         <p class="text-muted">Hemos recibido tus datos correctamente. Nuestro equipo se pondrá en contacto contigo pronto.</p>
-                        <button wire:click="$set('enviado', false)" class="btn btn-outline-secondary rounded-pill px-4">Solicitar otra cita</button>
+                        
+                        <button wire:click="resetForm" class="btn btn-outline-secondary rounded-pill px-4">Solicitar otra cita</button>
                     </div>
                 @else
                     <h4 class="text-center fw-bold mb-4" style="color: #162661;">Solicitar una Cita</h4>

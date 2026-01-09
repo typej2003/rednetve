@@ -57,6 +57,22 @@ class SolicitarCita extends Component
         $this->enviado = true;
     }
 
+    public function resetForm()
+    {
+        // Limpia todas las propiedades del formulario
+        $this->reset([
+            'nombre_completo', 
+            'telefono', 
+            'email', 
+            'direccion_servicio', 
+            'fecha', 
+            'hora'
+        ]);
+        
+        // Oculta la vista de agradecimiento y vuelve al formulario
+        $this->enviado = false;
+    }
+
     public function render()
     {
         return view('livewire.admin.solicitar-cita');
