@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Layouts;
 
 use Livewire\Component;
 use App\Models\User;
+use App\Models\Cita;
 
 class Aside extends Component
 {
@@ -12,6 +13,8 @@ class Aside extends Component
     public function render()
     {
         $this->totalUsuarios = User::all()->count();
+
+        $this->totalCitas = Cita::where('atendida', false)->count();
         return view('livewire.layouts.aside');
     }
 }

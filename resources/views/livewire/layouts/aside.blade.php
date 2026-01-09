@@ -121,6 +121,12 @@
                     <span class="menu-text">Usuarios</span>
                     <span class="badge rounded-pill bg-info text-dark menu-text">{{ $totalUsuarios ?? '0' }}</span>
                 </a>
+
+                <a href="{{ route('listacitas') }}" class="sidebar-link {{ request()->routeIs('listacitas') ? 'active' : '' }}">
+                    <i class="bi bi-people"></i> 
+                    <span class="menu-text">Listar Citas</span>
+                    <span class="badge rounded-pill bg-info text-dark menu-text">{{ $totalCitas ?? '0' }}</span>
+                </a>
             @endif
 
             @if(auth()->user()->role === 'cliente')
