@@ -149,6 +149,14 @@
             .linea-2 { font-size: 2rem; }
             .linea-3 { font-size: 1.4rem; flex-direction: column; align-items: flex-start; }
             .resaltado-conectada { margin-left: 0; margin-top: 10px; }
+
+            .texto-esquina-inferior {
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                z-index: 5;
+                color: white;
+            }
         }
 
         /* Animación de entrada desde la derecha */
