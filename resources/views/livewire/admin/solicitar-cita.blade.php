@@ -14,10 +14,10 @@
                         <h2 class="fw-bold" style="color: #162661;">¡Gracias por tu solicitud!</h2>
                         <p class="text-muted">Hemos recibido tus datos correctamente. Nuestro equipo se pondrá en contacto contigo pronto.</p>
                         
-                        <button wire:click="resetForm" class="btn btn-outline-secondary rounded-pill px-4">Solicitar otra cita</button>
+                        <button wire:click="resetForm" class="btn btn-outline-secondary rounded-pill px-4">Solicitar otra reunión</button>
                     </div>
                 @else
-                    <h4 class="text-center fw-bold mb-4" style="color: #162661;">Solicitar una Cita</h4>
+                    <h4 class="text-center fw-bold mb-4" style="color: #162661;">Solicitar una Reunión</h4>
                     
                     <form wire:submit.prevent="guardarCita">
                         <div class="mb-3">
@@ -60,7 +60,7 @@
 
                         <div class="d-grid mt-4">
                             <button type="submit" class="btn rounded-pill fw-bold text-white py-2 shadow-sm" style="background-color: #0a9aa0;">
-                                AGENDAR CITA <i class="bi bi-chevron-right ms-2"></i>
+                                AGENDAR REUNIÓN <i class="bi bi-chevron-right ms-2"></i>
                             </button>
                         </div>
                     </form>
