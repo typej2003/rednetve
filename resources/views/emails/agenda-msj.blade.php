@@ -46,7 +46,7 @@
                                                 <td width="10"></td>
                                                 <td align="center">
                                                     <a href="https://www.youtube.com/@RedNetVE" target="_blank">
-                                                        <img src="{{ asset('img/youtube_blanco.png') }}" width="32" alt="Facebook" style="display: block; border: 0;">
+                                                        <img src="{{ asset('img/youtube_blanco.png') }}" width="32" alt="Youtube" style="display: block; border: 0;">
                                                     </a>
                                                 </td>
                                             </tr>
