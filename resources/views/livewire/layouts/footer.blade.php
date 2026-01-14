@@ -33,7 +33,7 @@
                             <i class="bi bi-envelope-fill me-2" style="color: #009a9e;"></i>
                             Correo
                         </h6>
-                        <p class="small mb-0">socialmedia@rednet.com</p>
+                        <p class="small mb-0">socialmedia@rednetve.com</p>
                     </div>
 
                 </div>
