@@ -35,7 +35,24 @@
     @livewire('layouts.footer')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tu lógica de hamburguesa móvil actual
+        window.addEventListener('toggleSidebar', () => {
+            const sidebar = document.getElementById('sidebarMenu');
+            if(sidebar) {
+                sidebar.classList.toggle('show');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            const sidebar = document.getElementById('sidebarMenu');
+            const btn = document.querySelector('.btn-hamburguesa'); 
+            if (sidebar && window.innerWidth < 992 && sidebar.classList.contains('show') && !sidebar.contains(e.target) && (btn && !btn.contains(e.target))) {
+                sidebar.classList.remove('show');
+            }
+        });
+    </script>
     @livewireScripts
-    <script src="{{ mix('js/app.js') }}"></script>
+    <!-- <script src="{{ mix('js/app.js') }}"></script> -->
 </body>
 </html>

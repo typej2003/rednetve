@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{{ asset('favicon-16x16.png?v=1') }}">
-    <link rel="shortcut icon" href="{{ asset('favicon.ico?v=1') }}">
-    <meta name="theme-color" content="#ff572f">
-    <title>@yield('title', 'RedNetVe - Bienvenidos')</title>
+    <title>@yield('title', 'RedNetVe')</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
-    @livewireStyles
     <style>
         :root {
             --sidebar-width: 260px;
-            --sidebar-collapsed-width: 80px; /* Nueva variable para el estado minimizado */
+            --sidebar-collapsed-width: 80px; 
             --navbar-height: 70px; 
             --primary-rednet: #009b9f;
         }
@@ -26,59 +22,63 @@
             overflow-x: hidden;
         }
 
-        #wrapper {
-            display: flex;
-            min-height: calc(100vh - var(--navbar-height));
-        }
+        /* Estructura del Wrapper */
+        #wrapper { display: flex; }
 
-        /* Contenedor del Sidebar */
+        /* SIDEBAR FIJO EN ESCRITORIO */
         #sidebarMenu {
             width: var(--sidebar-width);
             background: white;
             border-right: 1px solid #dee2e6;
-            transition: width 0.3s ease-in-out; /* Animamos solo el ancho */
-            z-index: 1;
-            position: sticky;
+            transition: width 0.3s ease-in-out;
+            
+            /* Posición fija absoluta debajo del navbar */
+            position: fixed;
             top: var(--navbar-height);
-            height: calc(100vh - var(--navbar-height));
-            overflow: hidden; /* Evita que el contenido interno se desborde al achicar */
+            bottom: 0;
+            left: 0;
+            z-index: 1030;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
 
-        /* AJUSTE CLAVE: Cuando el componente interno Aside tiene la clase minimized */
-        #sidebarMenu:has(.minimized) {
+        /* Clase para cuando está minimizado */
+        #sidebarMenu.is-minimized {
             width: var(--sidebar-collapsed-width);
         }
 
-        .main-content {
-            flex: 1;
-            padding: 0px;
-            min-width: 0; 
-            transition: all 0.3s ease-in-out; /* Para que el contenido se expanda suavemente */
+        /* El contenido principal debe tener un margen izquierdo en escritorio */
+        .main-content { 
+            flex: 1; 
+            margin-left: var(--sidebar-width);
+            transition: margin-left 0.3s ease-in-out;
+            padding: 20px 0;
+        }
+
+        /* Ajuste de margen cuando el sidebar está minimizado */
+        body:has(#sidebarMenu.is-minimized) .main-content {
+            margin-left: var(--sidebar-collapsed-width);
         }
 
         /* RESPONSIVIDAD MÓVIL */
         @media (max-width: 991.98px) {
             #sidebarMenu {
-                position: fixed;
                 left: -100%; 
-                top: var(--navbar-height);
-                width: 280px !important; /* Forzamos ancho completo en móvil */
-                height: 100%;
-                box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+                width: 280px !important;
+                transition: left 0.3s ease-in-out;
             }
-
             #sidebarMenu.show {
-                left: 0; 
+                left: 0;
+            }
+            .main-content {
+                margin-left: 0 !important;
             }
         }
     </style>
+    @livewireStyles
 </head>
 <body>
-    @auth
-        @livewire('layouts.navbar-user')
-    @else
-        @livewire('layouts.navbar')
-    @endauth
+    @auth @livewire('layouts.navbar-user') @else @livewire('layouts.navbar') @endauth
 
     <div id="wrapper">
         @auth
@@ -96,24 +96,24 @@
 
     @livewire('layouts.footer')
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Tu lógica de hamburguesa móvil actual
+        // Toggle para móvil
         window.addEventListener('toggleSidebar', () => {
             const sidebar = document.getElementById('sidebarMenu');
-            if(sidebar) {
-                sidebar.classList.toggle('show');
-            }
+            if(sidebar) sidebar.classList.toggle('show');
         });
 
+        // Cerrar al hacer clic fuera en móvil
         document.addEventListener('click', (e) => {
             const sidebar = document.getElementById('sidebarMenu');
-            const btn = document.querySelector('.btn-hamburguesa'); 
-            if (sidebar && window.innerWidth < 992 && sidebar.classList.contains('show') && !sidebar.contains(e.target) && (btn && !btn.contains(e.target))) {
-                sidebar.classList.remove('show');
+            if (sidebar && window.innerWidth < 992 && sidebar.classList.contains('show')) {
+                if (!sidebar.contains(e.target) && !e.target.closest('.btn-hamburguesa-movil')) {
+                    sidebar.classList.remove('show');
+                }
             }
         });
     </script>
+    @livewireScripts
 </body>
 </html>
