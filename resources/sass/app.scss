@@ -1,0 +1,28 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Variables personalizadas
+$primary: #009b9f;
+
+@import '~bootstrap/scss/bootstrap';
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+    padding-top: 80px; // Espacio para el navbar fijo
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    &:hover {
+        background-color: darken($primary, 10%);
+    }
+}
+
