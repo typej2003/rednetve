@@ -85,7 +85,13 @@ class EmailController extends Component
 
     public function sendMailAgendaCliente(Cita $cita)
     {
-        $body = 'Gracias por agendar con nosotros, fecha: ' . $cita->fecha . ' hora: '.$cita->hora.', servicio: '. $cita->servicio.', dirección: '.$cita->direccion_servicio;
+        $cadena = "Gracias por agendar con nosotros:\n" .
+          "Cliente: {$cita->nombre_completo}\n" .
+          "Teléfono: {$cita->telefono}\n" .
+          "Email: {$cita->email}\n" .
+          "Servicio: {$cita->servicio}\n" .
+          "Fecha: {$cita->fecha} a las {$cita->hora}\n" .
+          "Dirección: {$cita->direccion_servicio}\n";
         $data = [
             "email" => 'ventas@rednetve.com',
             "title" => 'Administrador - RednetVe',
@@ -93,7 +99,7 @@ class EmailController extends Component
         ];
         
         Mail::send('emails.agenda-msj', $data, function($message) use ($data) {
-            $message->to($data["email"])
+            $message->to($cita->email)
                     ->from('ventas@rednetve.com', 'Administrador RednetVe') // <--- Aquí cambias el remitente
                     ->subject($data["title"]);    
         });

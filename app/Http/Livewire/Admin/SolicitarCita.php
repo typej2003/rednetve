@@ -61,10 +61,10 @@ class SolicitarCita extends Component
 
         $email = new EmailController();
 
-        //$emailwelcome->sendMailAgendaCliente($cita);
+        $emailwelcome->sendMailAgendaCliente($cita);
 
-        // $user = User::where('role', 'root')->first();
-        $user = User::where('role', 'vendedor')->first();        
+        $user = User::where('role', 'root')->first();
+        // $user = User::where('role', 'vendedor')->first();        
         $email->sendMailAgenda($user, $cita);
 
     }
