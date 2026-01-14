@@ -33,8 +33,7 @@
                             <i class="bi bi-envelope-fill me-2" style="color: #009a9e;"></i>
                             Correo
                         </h6>
-                        <p class="small mb-0">rednetcaracas@gmail.com</p>
-                        <p class="small ">rednettachira@gmail.com</p>
+                        <p class="small mb-0">socialmedia@rednet.com</p>
                     </div>
 
                 </div>
@@ -48,10 +47,10 @@
                         <small>© {{ date('Y') }} <strong>Rednetve</strong>. Todos los derechos reservados.</small>
                     </div>
                     <div class="col-12 col-md-4 d-flex justify-content-center gap-3">
-                        <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-circle"><i class="bi bi-tiktok"></i></a>
-                        <a href="#" class="social-circle"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="social-circle"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.instagram.com/rednetve/" class="social-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@rednetve" class="social-circle"><i class="bi bi-tiktok"></i></a>
+                        <!-- <a href="#" class="social-circle"><i class="bi bi-twitter-x"></i></a> -->
+                        <a href="https://www.youtube.com/@RedNetVE" class="social-circle"><i class="bi bi-youtube"></i></a>
                     </div>
                     <div class="col-12 col-md-4 text-center text-md-end">
                         <img src="{{ asset('img/wifiexpres_01.png') }}" alt="Wifi Expres" style="max-height: 30px; opacity: 0.7;">
