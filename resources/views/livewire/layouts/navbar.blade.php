@@ -88,7 +88,7 @@
                     </div>
                     @endauth
 
-                    <div class="dropdown-rednet mx-3">
+                    <div class="dropdown-rednet mx-3 d-none">
                         <a href="/pagueaqui" class="text-white text-uppercase fs-6 nav-link-custom">PAGUE AQUÍ</a>
                     </div>
                 </nav>
