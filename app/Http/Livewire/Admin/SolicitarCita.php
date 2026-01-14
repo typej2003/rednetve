@@ -87,6 +87,7 @@ class SolicitarCita extends Component
 
     public function render()
     {
-        return view('livewire.admin.solicitar-cita');
+        return view('livewire.admin.solicitar-cita')
+                ->layout('layouts.guest');
     }
 }
