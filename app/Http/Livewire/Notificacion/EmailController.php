@@ -71,7 +71,7 @@ class EmailController extends Component
           "Estado: " . ($cita->atendida ? 'Atendida' : 'Pendiente');
 
         $data = [
-            "email" => 'admin@rednetve.com',
+            "email" => $user->email,
             "title" => 'Administrador - RedNetVe',
             "body"  => $cadena
         ];
