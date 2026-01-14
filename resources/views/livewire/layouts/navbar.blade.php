@@ -105,7 +105,7 @@
                         <a href="/" class="text-white py-2 border-top border-info text-decoration-none small-menu-item">INICIO</a>
                         <a href="/#nosotros" class="text-white py-2 border-top border-info text-decoration-none small-menu-item">NOSOTROS</a>
                         <a href="/#servicios" class="text-white py-2 border-top border-info text-decoration-none small-menu-item">SERVICIOS</a>
-                        <a href="/pagueaqui" class="text-white py-2 border-top border-info text-decoration-none small-menu-item">PAGUE AQUÍ</a>
+                        <a href="/pagueaqui" class="text-white py-2 border-top border-info text-decoration-none small-menu-item d-none">PAGUE AQUÍ</a>
                     </nav>
                 </div>
             </div>
