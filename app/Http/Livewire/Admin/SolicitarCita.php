@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Http\Livewire\Notificacion\EmailController;
+
 use Livewire\Component;
 use App\Models\Cita;
 
@@ -55,6 +57,15 @@ class SolicitarCita extends Component
         ]);
 
         $this->enviado = true;
+
+        $emailwelcome = new EmailController();
+
+        $emailwelcome->sendMailAgendaCliente($cita);
+
+        // $user = User::where('role', 'root')->first();
+        $user = User::where('role', 'vendedor')->first();        
+        $emailwelcome->sendMailAgenda($user, $cita);
+
     }
 
     public function resetForm()
