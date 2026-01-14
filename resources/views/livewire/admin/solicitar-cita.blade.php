@@ -1,5 +1,5 @@
 <div class="container py-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center my-2" style="margin-top: 35px !important;">
         <div class="col-md-6">
             <div class="card border-0 shadow-lg p-4">
                 <div class="text-center mb-4">
