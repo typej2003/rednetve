@@ -94,13 +94,13 @@ class EmailController extends Component
           "Reunión \n" .
           "Fecha: {$cita->fecha} a las {$cita->hora}\n";
         $data = [
-            "email" => 'ventas@rednetve.com',
+            "email" => $cita->email,
             "title" => 'Reunión RednetVe',
             "body"  => $cadena
         ];
         
         Mail::send('emails.agenda-msj', $data, function($message) use ($data) {
-            $message->to($cita->email)
+            $message->to($data["email"])
                     ->from('ventas@rednetve.com', 'Administrador RednetVe') // <--- Aquí cambias el remitente
                     ->subject($data["title"]);    
         });
