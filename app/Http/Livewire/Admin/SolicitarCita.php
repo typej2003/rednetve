@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin;
 use App\Http\Livewire\Notificacion\EmailController;
 
 use Livewire\Component;
+use App\Models\User;
 use App\Models\Cita;
 
 class SolicitarCita extends Component
