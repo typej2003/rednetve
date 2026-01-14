@@ -90,12 +90,13 @@ class EmailController extends Component
           "Teléfono: {$cita->telefono}\n" .
           "Email: {$cita->email}\n" .
           "Servicio: {$cita->servicio}\n" .
-          "Fecha: {$cita->fecha} a las {$cita->hora}\n" .
-          "Dirección: {$cita->direccion_servicio}\n";
+          "Dirección: {$cita->direccion_servicio}\n" .
+          "Reunión \n" .
+          "Fecha: {$cita->fecha} a las {$cita->hora}\n";
         $data = [
             "email" => 'ventas@rednetve.com',
-            "title" => 'Administrador - RednetVe',
-            "body"  => $body
+            "title" => 'Reunión RednetVe',
+            "body"  => $cadena
         ];
         
         Mail::send('emails.agenda-msj', $data, function($message) use ($data) {
