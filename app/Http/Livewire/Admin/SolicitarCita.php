@@ -45,7 +45,7 @@ class SolicitarCita extends Component
     {
         $this->validate();
 
-        Cita::create([
+        $cita = Cita::create([
             'nombre_completo' => $this->nombre_completo,
             'telefono' => $this->telefono,
             'email' => $this->email,
